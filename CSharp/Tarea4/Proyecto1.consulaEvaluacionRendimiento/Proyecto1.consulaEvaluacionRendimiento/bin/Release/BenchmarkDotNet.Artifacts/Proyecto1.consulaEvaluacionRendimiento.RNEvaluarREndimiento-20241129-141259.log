@@ -1,0 +1,69 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 4 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// ***** Done, took 00:00:00 (0.13 sec)   *****
+// Found 4 benchmarks:
+//   RNEvaluarREndimiento.HolaMundobase: DefaultJob
+//   RNEvaluarREndimiento.HolaMundoRefactorizado: DefaultJob
+//   RNEvaluarREndimiento.PruebaPerformRNCliente: DefaultJob
+//   RNEvaluarREndimiento.InsertarClienteNaturalAsiync: DefaultJob
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Alto rendimiento)
+// Generate Exception: System.NotSupportedException: async void is not supported by design
+   en BenchmarkDotNet.Code.CodeGenerator.GetDeclarationsProvider(Descriptor descriptor)
+   en BenchmarkDotNet.Code.CodeGenerator.Generate(BuildPartition buildPartition)
+   en BenchmarkDotNet.Toolchains.GeneratorBase.GenerateCode(BuildPartition buildPartition, ArtifactsPaths artifactsPaths)
+   en BenchmarkDotNet.Toolchains.GeneratorBase.GenerateProject(BuildPartition buildPartition, ILogger logger, String rootArtifactsFolderPath)
+
+// BenchmarkDotNet has failed to build the auto-generated boilerplate code.
+// It can be found in D:\Aplicaciones 2024\ProgramacionIV\Tarea4\Proyecto1.consulaEvaluacionRendimiento\Proyecto1.consulaEvaluacionRendimiento\bin\Release
+// Please follow the troubleshooting guide: https://benchmarkdotnet.org/articles/guides/troubleshooting.html
+
+// ** Remained 0 (0,0 %) benchmark(s) to run. Estimated finish 2024-11-29 14:13 (0h 0m from now) **
+Successfully reverted power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Alto rendimiento)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\Proyecto1.consulaEvaluacionRendimiento.RNEvaluarREndimiento-report.csv
+  BenchmarkDotNet.Artifacts\results\Proyecto1.consulaEvaluacionRendimiento.RNEvaluarREndimiento-report-github.md
+  BenchmarkDotNet.Artifacts\results\Proyecto1.consulaEvaluacionRendimiento.RNEvaluarREndimiento-report.html
+
+// * Detailed results *
+RNEvaluarREndimiento.HolaMundobase: DefaultJob
+Runtime = ; GC = 
+There are not any results runs
+
+// * Summary *
+
+BenchmarkDotNet v0.14.0, Windows 10 (10.0.19045.5131/22H2/2022Update)
+AMD FX-9800P RADEON R7, 12 COMPUTE CORES 4C+8G, 1 CPU, 4 logical and 4 physical cores
+  [Host] : .NET Framework 4.8.1 (4.8.9282.0), X86 LegacyJIT [AttachedDebugger]
+
+
+| Method        | Mean | Error | Ratio | RatioSD |
+|-------------- |-----:|------:|------:|--------:|
+| HolaMundobase |   NA |    NA |     ? |       ? |
+
+Benchmarks with issues:
+  RNEvaluarREndimiento.HolaMundobase: DefaultJob
+
+// * Warnings *
+Environment
+  Summary -> Benchmark was executed with attached debugger
+BaselineCustomAnalyzer
+  Summary -> A question mark '?' symbol indicates that it was not possible to compute the (Ratio, RatioSD) column(s) because the baseline value is too close to zero.
+
+// * Legends *
+  Mean    : Arithmetic mean of all measurements
+  Error   : Half of 99.9% confidence interval
+  Ratio   : Mean of the ratio distribution ([Current]/[Baseline])
+  RatioSD : Standard deviation of the ratio distribution ([Current]/[Baseline])
+  1 ns    : 1 Nanosecond (0.000000001 sec)
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:00 (0.17 sec), executed benchmarks: 0
+
+Global total time: 00:00:02 (2.32 sec), executed benchmarks: 0
+// * Artifacts cleanup *
+Artifacts cleanup is finished

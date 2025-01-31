@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="80f1110b67cf4bd18716903d97b5cdb2" Name="Diagram1" ZoomLevel="77">
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.AperturaSistema" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.Caja" Width="1.5" PointX="5.25" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.CalificacionCartera" Width="1.5" PointX="8" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.Cargo" Width="1.5" PointX="0.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.Ciudad" Width="1.5" PointX="5.75" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.Cliente" Width="1.5" PointX="8" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.Contrato" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.Cuenta" Width="1.5" PointX="5.25" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.CuentaBancaria" Width="1.5" PointX="10.25" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.Cuota" Width="1.5" PointX="12.5" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.Departamento" Width="1.5" PointX="3.5" PointY="20.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.Empleado" Width="1.5" PointX="3" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.EntidadFinanciera" Width="1.5" PointX="13.125" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.Garantia" Width="1.5" PointX="12.5" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.HTransaccion" Width="1.5" PointX="7.5" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.Natural" Width="1.5" PointX="8" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.Pago" Width="1.5" PointX="14.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.Prestamo" Width="1.5" PointX="10.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.Rubro" Width="1.5" PointX="5.75" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.Sucursal" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.TbResumenPrestamo" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.TipoDesembolso" Width="1.5" PointX="8" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.Transaccion" Width="1.5" PointX="7.5" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.TransaccionCuenta" Width="1.5" PointX="7.5" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.TransaccionCuentaBancaria" Width="1.5" PointX="12.5" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.VclienteGeneral" Width="1.5" PointX="0.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.VCuentaBancaria" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.VCuentaBancariaTransaccion" Width="1.5" PointX="14.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.VGPrestamo" Width="1.5" PointX="14.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.VistaCajaTransaccion" Width="1.5" PointX="9.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.VMensajeria" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.VPrestamoCuotaCalificacion" Width="1.5" PointX="11.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.VPrestamoCuotaCalificacionEstadoCuotaCanceladas" Width="1.5" PointX="16.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.VPrestamoCuotaCalificacionEstadoCuotaPendiente" Width="1.5" PointX="16.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.VPrestamoCuotas" Width="1.5" PointX="16.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbFinanciaCorpModel.VPrestamoCuotasVigente" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="dbFinanciaCorpModel.FK__Caja__idEmpleado__2E1BDC42" ManuallyRouted="false" />
+        <AssociationConnector Association="dbFinanciaCorpModel.FK__HTransacc__idCaj__33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="dbFinanciaCorpModel.FK__Transacci__idCaj__30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="dbFinanciaCorpModel.FK__Prestamo__idCali__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="dbFinanciaCorpModel.FK__Empleado__idCarg__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="dbFinanciaCorpModel.FK__Ciudad__idDepart__145C0A3F" ManuallyRouted="false" />
+        <AssociationConnector Association="dbFinanciaCorpModel.FK__Cliente__idCiudd__182C9B23" ManuallyRouted="false" />
+        <AssociationConnector Association="dbFinanciaCorpModel.FK__Cliente__idrubro__173876EA" ManuallyRouted="false" />
+        <AssociationConnector Association="dbFinanciaCorpModel.FK__Natural__id__1B0907CE" ManuallyRouted="false" />
+        <AssociationConnector Association="dbFinanciaCorpModel.FK__Prestamo__idclie__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="dbFinanciaCorpModel.FK__Cuenta__idEmplea__3C34F16F" ManuallyRouted="false" />
+        <AssociationConnector Association="dbFinanciaCorpModel.FK__Transacci__idCue__3F115E1A" ManuallyRouted="false" />
+        <AssociationConnector Association="dbFinanciaCorpModel.FK__CuentaBan__idEmp__2B0A656D" ManuallyRouted="false" />
+        <AssociationConnector Association="dbFinanciaCorpModel.FK__CuentaBan__idEnt__2BFE89A6" ManuallyRouted="false" />
+        <AssociationConnector Association="dbFinanciaCorpModel.FK__Transacci__idcue__2EDAF651" ManuallyRouted="false" />
+        <AssociationConnector Association="dbFinanciaCorpModel.FK__Cuota__idPrestam__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="dbFinanciaCorpModel.FK__Pago__idCuota__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="dbFinanciaCorpModel.FK__Empleado__idSucu__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="dbFinanciaCorpModel.FK__HTransacc__idEmp__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="dbFinanciaCorpModel.FK__Prestamo__idEmpl__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="dbFinanciaCorpModel.FK__Garantia__idPres__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="dbFinanciaCorpModel.FK__Prestamo__idtipo__339FAB6E" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,633 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 3 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+BuildScript: D:\Aplicaciones 2024\ProgramacionIV\Tarea4\Proyecto1.consulaEvaluacionRendimiento\Proyecto1.consulaEvaluacionRendimiento\bin\Release\7eba2cdb-82b7-4f55-9390-897d1d1d818c.bat
+// ***** Done, took 00:00:05 (5.92 sec)   *****
+// Found 3 benchmarks:
+//   RNEvaluarREndimiento.HolaMundobase: DefaultJob
+//   RNEvaluarREndimiento.HolaMundoRefactorizado: DefaultJob
+//   RNEvaluarREndimiento.PruebaPerformRNCliente: DefaultJob
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Alto rendimiento)
+// **************************
+// Benchmark: RNEvaluarREndimiento.HolaMundobase: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: D:\Aplicaciones 2024\ProgramacionIV\Tarea4\Proyecto1.consulaEvaluacionRendimiento\Proyecto1.consulaEvaluacionRendimiento\bin\Release\7eba2cdb-82b7-4f55-9390-897d1d1d818c.exe --anonymousPipes 1592 1588 --benchmarkName Proyecto1.consulaEvaluacionRendimiento.RNEvaluarREndimiento.HolaMundobase --job Default --benchmarkId 0 in 
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET Framework 4.8.1 (4.8.9282.0), X86 LegacyJIT
+// GC=Concurrent Workstation
+// HardwareIntrinsics= 
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 316400.00 ns, 316.4000 us/op
+WorkloadJitting  1: 1 op, 111122300.00 ns, 111.1223 ms/op
+Hola Mundo Refactorizado!
+
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadPilot    1: 2 op, 215146000.00 ns, 107.5730 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadPilot    2: 3 op, 325913400.00 ns, 108.6378 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadPilot    3: 4 op, 433837700.00 ns, 108.4594 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadPilot    4: 5 op, 544804900.00 ns, 108.9610 ms/op
+
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadWarmup   1: 5 op, 539170700.00 ns, 107.8341 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadWarmup   2: 5 op, 545174300.00 ns, 109.0349 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadWarmup   3: 5 op, 544386200.00 ns, 108.8772 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadWarmup   4: 5 op, 545923900.00 ns, 109.1848 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadWarmup   5: 5 op, 543723300.00 ns, 108.7447 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadWarmup   6: 5 op, 540346300.00 ns, 108.0693 ms/op
+
+// BeforeActualRun
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadActual   1: 5 op, 549958800.00 ns, 109.9918 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadActual   2: 5 op, 540889400.00 ns, 108.1779 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadActual   3: 5 op, 534563900.00 ns, 106.9128 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadActual   4: 5 op, 543100400.00 ns, 108.6201 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadActual   5: 5 op, 541243100.00 ns, 108.2486 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadActual   6: 5 op, 549407200.00 ns, 109.8814 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadActual   7: 5 op, 543592000.00 ns, 108.7184 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadActual   8: 5 op, 539133200.00 ns, 107.8266 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadActual   9: 5 op, 548319100.00 ns, 109.6638 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadActual  10: 5 op, 545105000.00 ns, 109.0210 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadActual  11: 5 op, 541420400.00 ns, 108.2841 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadActual  12: 5 op, 541419400.00 ns, 108.2839 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadActual  13: 5 op, 544139700.00 ns, 108.8279 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadActual  14: 5 op, 541855200.00 ns, 108.3710 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadActual  15: 5 op, 538249400.00 ns, 107.6499 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 5 op, 540889400.00 ns, 108.1779 ms/op
+WorkloadResult   2: 5 op, 534563900.00 ns, 106.9128 ms/op
+WorkloadResult   3: 5 op, 543100400.00 ns, 108.6201 ms/op
+WorkloadResult   4: 5 op, 541243100.00 ns, 108.2486 ms/op
+WorkloadResult   5: 5 op, 549407200.00 ns, 109.8814 ms/op
+WorkloadResult   6: 5 op, 543592000.00 ns, 108.7184 ms/op
+WorkloadResult   7: 5 op, 539133200.00 ns, 107.8266 ms/op
+WorkloadResult   8: 5 op, 548319100.00 ns, 109.6638 ms/op
+WorkloadResult   9: 5 op, 545105000.00 ns, 109.0210 ms/op
+WorkloadResult  10: 5 op, 541420400.00 ns, 108.2841 ms/op
+WorkloadResult  11: 5 op, 541419400.00 ns, 108.2839 ms/op
+WorkloadResult  12: 5 op, 544139700.00 ns, 108.8279 ms/op
+WorkloadResult  13: 5 op, 541855200.00 ns, 108.3710 ms/op
+WorkloadResult  14: 5 op, 538249400.00 ns, 107.6499 ms/op
+
+// AfterAll
+// Benchmark Process 1852 has exited with code 0.
+
+Mean = 108.463 ms, StdErr = 0.205 ms (0.19%), N = 14, StdDev = 0.767 ms
+Min = 106.913 ms, Q1 = 108.196 ms, Median = 108.328 ms, Q3 = 108.801 ms, Max = 109.881 ms
+IQR = 0.605 ms, LowerFence = 107.288 ms, UpperFence = 109.708 ms
+ConfidenceInterval = [107.598 ms; 109.329 ms] (CI 99.9%), Margin = 0.866 ms (0.80% of Mean)
+Skewness = 0.04, Kurtosis = 2.6, MValue = 2
+
+// ** Remained 2 (66,7 %) benchmark(s) to run. Estimated finish 2024-11-29 14:07 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Alto rendimiento)
+// **************************
+// Benchmark: RNEvaluarREndimiento.HolaMundoRefactorizado: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: D:\Aplicaciones 2024\ProgramacionIV\Tarea4\Proyecto1.consulaEvaluacionRendimiento\Proyecto1.consulaEvaluacionRendimiento\bin\Release\7eba2cdb-82b7-4f55-9390-897d1d1d818c.exe --anonymousPipes 1688 1684 --benchmarkName Proyecto1.consulaEvaluacionRendimiento.RNEvaluarREndimiento.HolaMundoRefactorizado --job Default --benchmarkId 1 in 
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET Framework 4.8.1 (4.8.9282.0), X86 LegacyJIT
+// GC=Concurrent Workstation
+// HardwareIntrinsics= 
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 246100.00 ns, 246.1000 us/op
+Hola Mundo Refactorizado!
+WorkloadJitting  1: 1 op, 159705700.00 ns, 159.7057 ms/op
+
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadPilot    1: 2 op, 315055700.00 ns, 157.5279 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadPilot    2: 3 op, 465502400.00 ns, 155.1675 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadPilot    3: 4 op, 621883500.00 ns, 155.4709 ms/op
+
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadWarmup   1: 4 op, 618752000.00 ns, 154.6880 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadWarmup   2: 4 op, 620408200.00 ns, 155.1021 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadWarmup   3: 4 op, 613905200.00 ns, 153.4763 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadWarmup   4: 4 op, 620883400.00 ns, 155.2209 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadWarmup   5: 4 op, 621455200.00 ns, 155.3638 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadWarmup   6: 4 op, 624584900.00 ns, 156.1462 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadWarmup   7: 4 op, 621597400.00 ns, 155.3994 ms/op
+
+// BeforeActualRun
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadActual   1: 4 op, 623790300.00 ns, 155.9476 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadActual   2: 4 op, 624232300.00 ns, 156.0581 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadActual   3: 4 op, 623082100.00 ns, 155.7705 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadActual   4: 4 op, 624067100.00 ns, 156.0168 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadActual   5: 4 op, 623290900.00 ns, 155.8227 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadActual   6: 4 op, 622197900.00 ns, 155.5495 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadActual   7: 4 op, 623150300.00 ns, 155.7876 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadActual   8: 4 op, 619386300.00 ns, 154.8466 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadActual   9: 4 op, 620298600.00 ns, 155.0747 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadActual  10: 4 op, 627000600.00 ns, 156.7502 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadActual  11: 4 op, 629207800.00 ns, 157.3020 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadActual  12: 4 op, 628552900.00 ns, 157.1382 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadActual  13: 4 op, 622619900.00 ns, 155.6550 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadActual  14: 4 op, 624634500.00 ns, 156.1586 ms/op
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+Hola Mundo Refactorizado!
+WorkloadActual  15: 4 op, 618337300.00 ns, 154.5843 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 4 op, 623790300.00 ns, 155.9476 ms/op
+WorkloadResult   2: 4 op, 624232300.00 ns, 156.0581 ms/op
+WorkloadResult   3: 4 op, 623082100.00 ns, 155.7705 ms/op
+WorkloadResult   4: 4 op, 624067100.00 ns, 156.0168 ms/op
+WorkloadResult   5: 4 op, 623290900.00 ns, 155.8227 ms/op
+WorkloadResult   6: 4 op, 622197900.00 ns, 155.5495 ms/op
+WorkloadResult   7: 4 op, 623150300.00 ns, 155.7876 ms/op
+WorkloadResult   8: 4 op, 619386300.00 ns, 154.8466 ms/op
+WorkloadResult   9: 4 op, 620298600.00 ns, 155.0747 ms/op
+WorkloadResult  10: 4 op, 627000600.00 ns, 156.7502 ms/op
+WorkloadResult  11: 4 op, 622619900.00 ns, 155.6550 ms/op
+WorkloadResult  12: 4 op, 624634500.00 ns, 156.1586 ms/op
+WorkloadResult  13: 4 op, 618337300.00 ns, 154.5843 ms/op
+
+// AfterAll
+// Benchmark Process 9848 has exited with code 0.
+
+Mean = 155.694 ms, StdErr = 0.161 ms (0.10%), N = 13, StdDev = 0.579 ms
+Min = 154.584 ms, Q1 = 155.549 ms, Median = 155.788 ms, Q3 = 156.017 ms, Max = 156.750 ms
+IQR = 0.467 ms, LowerFence = 154.849 ms, UpperFence = 156.718 ms
+ConfidenceInterval = [155.001 ms; 156.387 ms] (CI 99.9%), Margin = 0.693 ms (0.45% of Mean)
+Skewness = -0.33, Kurtosis = 2.4, MValue = 2
+
+// ** Remained 1 (33,3 %) benchmark(s) to run. Estimated finish 2024-11-29 14:07 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Alto rendimiento)
+// **************************
+// Benchmark: RNEvaluarREndimiento.PruebaPerformRNCliente: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: D:\Aplicaciones 2024\ProgramacionIV\Tarea4\Proyecto1.consulaEvaluacionRendimiento\Proyecto1.consulaEvaluacionRendimiento\bin\Release\7eba2cdb-82b7-4f55-9390-897d1d1d818c.exe --anonymousPipes 1760 1704 --benchmarkName Proyecto1.consulaEvaluacionRendimiento.RNEvaluarREndimiento.PruebaPerformRNCliente --job Default --benchmarkId 2 in 
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET Framework 4.8.1 (4.8.9282.0), X86 LegacyJIT
+// GC=Concurrent Workstation
+// HardwareIntrinsics= 
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 229100.00 ns, 229.1000 us/op
+// Wrong assembly binding redirects for EntityFramework.resources, Version=6.0.0.0, Culture=es-ES, PublicKeyToken=b77a5c561934e089.
+// Wrong assembly binding redirects for EntityFramework.resources, Version=6.0.0.0, Culture=es-ES, PublicKeyToken=b77a5c561934e089.
+// Wrong assembly binding redirects for EntityFramework.resources, Version=6.0.0.0, Culture=es, PublicKeyToken=b77a5c561934e089.
+// Wrong assembly binding redirects for EntityFramework.resources, Version=6.0.0.0, Culture=es, PublicKeyToken=b77a5c561934e089.
+WorkloadJitting  1: 1 op, 3356657600.00 ns, 3.3567 s/op
+
+OverheadJitting  2: 1 op, 13800.00 ns, 13.8000 us/op
+WorkloadJitting  2: 1 op, 7871500.00 ns, 7.8715 ms/op
+
+OverheadJitting  3: 16 op, 331700.00 ns, 20.7313 us/op
+WorkloadJitting  3: 16 op, 106349000.00 ns, 6.6468 ms/op
+
+WorkloadPilot    1: 16 op, 93018300.00 ns, 5.8136 ms/op
+WorkloadPilot    2: 32 op, 176617200.00 ns, 5.5193 ms/op
+WorkloadPilot    3: 64 op, 377788000.00 ns, 5.9029 ms/op
+WorkloadPilot    4: 128 op, 640152400.00 ns, 5.0012 ms/op
+
+OverheadWarmup   1: 128 op, 11500.00 ns, 89.8438 ns/op
+OverheadWarmup   2: 128 op, 1700.00 ns, 13.2813 ns/op
+OverheadWarmup   3: 128 op, 1600.00 ns, 12.5000 ns/op
+OverheadWarmup   4: 128 op, 1700.00 ns, 13.2813 ns/op
+OverheadWarmup   5: 128 op, 1800.00 ns, 14.0625 ns/op
+OverheadWarmup   6: 128 op, 1700.00 ns, 13.2813 ns/op
+OverheadWarmup   7: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadWarmup   8: 128 op, 1600.00 ns, 12.5000 ns/op
+
+OverheadActual   1: 128 op, 1900.00 ns, 14.8438 ns/op
+OverheadActual   2: 128 op, 1800.00 ns, 14.0625 ns/op
+OverheadActual   3: 128 op, 1800.00 ns, 14.0625 ns/op
+OverheadActual   4: 128 op, 1400.00 ns, 10.9375 ns/op
+OverheadActual   5: 128 op, 1800.00 ns, 14.0625 ns/op
+OverheadActual   6: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadActual   7: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual   8: 128 op, 1900.00 ns, 14.8438 ns/op
+OverheadActual   9: 128 op, 1400.00 ns, 10.9375 ns/op
+OverheadActual  10: 128 op, 1800.00 ns, 14.0625 ns/op
+OverheadActual  11: 128 op, 1600.00 ns, 12.5000 ns/op
+OverheadActual  12: 128 op, 1200.00 ns, 9.3750 ns/op
+OverheadActual  13: 128 op, 1400.00 ns, 10.9375 ns/op
+OverheadActual  14: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadActual  15: 128 op, 1800.00 ns, 14.0625 ns/op
+OverheadActual  16: 128 op, 1400.00 ns, 10.9375 ns/op
+OverheadActual  17: 128 op, 1800.00 ns, 14.0625 ns/op
+OverheadActual  18: 128 op, 1500.00 ns, 11.7188 ns/op
+OverheadActual  19: 128 op, 1800.00 ns, 14.0625 ns/op
+OverheadActual  20: 128 op, 1800.00 ns, 14.0625 ns/op
+
+WorkloadWarmup   1: 128 op, 651081600.00 ns, 5.0866 ms/op
+WorkloadWarmup   2: 128 op, 673292800.00 ns, 5.2601 ms/op
+WorkloadWarmup   3: 128 op, 702655800.00 ns, 5.4895 ms/op
+WorkloadWarmup   4: 128 op, 636839800.00 ns, 4.9753 ms/op
+WorkloadWarmup   5: 128 op, 646893200.00 ns, 5.0539 ms/op
+WorkloadWarmup   6: 128 op, 637460900.00 ns, 4.9802 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 128 op, 643049400.00 ns, 5.0238 ms/op
+WorkloadActual   2: 128 op, 638543100.00 ns, 4.9886 ms/op
+WorkloadActual   3: 128 op, 637575300.00 ns, 4.9811 ms/op
+WorkloadActual   4: 128 op, 651838700.00 ns, 5.0925 ms/op
+WorkloadActual   5: 128 op, 641447300.00 ns, 5.0113 ms/op
+WorkloadActual   6: 128 op, 626310000.00 ns, 4.8930 ms/op
+WorkloadActual   7: 128 op, 665548200.00 ns, 5.1996 ms/op
+WorkloadActual   8: 128 op, 639677200.00 ns, 4.9975 ms/op
+WorkloadActual   9: 128 op, 646219600.00 ns, 5.0486 ms/op
+WorkloadActual  10: 128 op, 652375200.00 ns, 5.0967 ms/op
+WorkloadActual  11: 128 op, 738892700.00 ns, 5.7726 ms/op
+WorkloadActual  12: 128 op, 672689200.00 ns, 5.2554 ms/op
+WorkloadActual  13: 128 op, 642823100.00 ns, 5.0221 ms/op
+WorkloadActual  14: 128 op, 718316700.00 ns, 5.6118 ms/op
+WorkloadActual  15: 128 op, 817847000.00 ns, 6.3894 ms/op
+WorkloadActual  16: 128 op, 737347500.00 ns, 5.7605 ms/op
+WorkloadActual  17: 128 op, 721994900.00 ns, 5.6406 ms/op
+WorkloadActual  18: 128 op, 674010800.00 ns, 5.2657 ms/op
+WorkloadActual  19: 128 op, 685978700.00 ns, 5.3592 ms/op
+WorkloadActual  20: 128 op, 685560300.00 ns, 5.3559 ms/op
+WorkloadActual  21: 128 op, 680685500.00 ns, 5.3179 ms/op
+WorkloadActual  22: 128 op, 710731000.00 ns, 5.5526 ms/op
+WorkloadActual  23: 128 op, 688242200.00 ns, 5.3769 ms/op
+WorkloadActual  24: 128 op, 691372000.00 ns, 5.4013 ms/op
+WorkloadActual  25: 128 op, 756736100.00 ns, 5.9120 ms/op
+WorkloadActual  26: 128 op, 685940600.00 ns, 5.3589 ms/op
+WorkloadActual  27: 128 op, 691710700.00 ns, 5.4040 ms/op
+WorkloadActual  28: 128 op, 682224000.00 ns, 5.3299 ms/op
+WorkloadActual  29: 128 op, 687832900.00 ns, 5.3737 ms/op
+WorkloadActual  30: 128 op, 696802200.00 ns, 5.4438 ms/op
+WorkloadActual  31: 128 op, 663028700.00 ns, 5.1799 ms/op
+WorkloadActual  32: 128 op, 695831400.00 ns, 5.4362 ms/op
+WorkloadActual  33: 128 op, 746679400.00 ns, 5.8334 ms/op
+WorkloadActual  34: 128 op, 688688200.00 ns, 5.3804 ms/op
+WorkloadActual  35: 128 op, 690122700.00 ns, 5.3916 ms/op
+WorkloadActual  36: 128 op, 689313400.00 ns, 5.3853 ms/op
+WorkloadActual  37: 128 op, 682691500.00 ns, 5.3335 ms/op
+WorkloadActual  38: 128 op, 678400900.00 ns, 5.3000 ms/op
+WorkloadActual  39: 128 op, 699884400.00 ns, 5.4678 ms/op
+WorkloadActual  40: 128 op, 678941500.00 ns, 5.3042 ms/op
+WorkloadActual  41: 128 op, 694698300.00 ns, 5.4273 ms/op
+WorkloadActual  42: 128 op, 690774100.00 ns, 5.3967 ms/op
+WorkloadActual  43: 128 op, 692681900.00 ns, 5.4116 ms/op
+WorkloadActual  44: 128 op, 688273400.00 ns, 5.3771 ms/op
+WorkloadActual  45: 128 op, 707133200.00 ns, 5.5245 ms/op
+WorkloadActual  46: 128 op, 680454000.00 ns, 5.3160 ms/op
+WorkloadActual  47: 128 op, 672111700.00 ns, 5.2509 ms/op
+WorkloadActual  48: 128 op, 690859300.00 ns, 5.3973 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 128 op, 643047600.00 ns, 5.0238 ms/op
+WorkloadResult   2: 128 op, 638541300.00 ns, 4.9886 ms/op
+WorkloadResult   3: 128 op, 637573500.00 ns, 4.9810 ms/op
+WorkloadResult   4: 128 op, 651836900.00 ns, 5.0925 ms/op
+WorkloadResult   5: 128 op, 641445500.00 ns, 5.0113 ms/op
+WorkloadResult   6: 128 op, 626308200.00 ns, 4.8930 ms/op
+WorkloadResult   7: 128 op, 665546400.00 ns, 5.1996 ms/op
+WorkloadResult   8: 128 op, 639675400.00 ns, 4.9975 ms/op
+WorkloadResult   9: 128 op, 646217800.00 ns, 5.0486 ms/op
+WorkloadResult  10: 128 op, 652373400.00 ns, 5.0967 ms/op
+WorkloadResult  11: 128 op, 672687400.00 ns, 5.2554 ms/op
+WorkloadResult  12: 128 op, 642821300.00 ns, 5.0220 ms/op
+WorkloadResult  13: 128 op, 718314900.00 ns, 5.6118 ms/op
+WorkloadResult  14: 128 op, 721993100.00 ns, 5.6406 ms/op
+WorkloadResult  15: 128 op, 674009000.00 ns, 5.2657 ms/op
+WorkloadResult  16: 128 op, 685976900.00 ns, 5.3592 ms/op
+WorkloadResult  17: 128 op, 685558500.00 ns, 5.3559 ms/op
+WorkloadResult  18: 128 op, 680683700.00 ns, 5.3178 ms/op
+WorkloadResult  19: 128 op, 710729200.00 ns, 5.5526 ms/op
+WorkloadResult  20: 128 op, 688240400.00 ns, 5.3769 ms/op
+WorkloadResult  21: 128 op, 691370200.00 ns, 5.4013 ms/op
+WorkloadResult  22: 128 op, 685938800.00 ns, 5.3589 ms/op
+WorkloadResult  23: 128 op, 691708900.00 ns, 5.4040 ms/op
+WorkloadResult  24: 128 op, 682222200.00 ns, 5.3299 ms/op
+WorkloadResult  25: 128 op, 687831100.00 ns, 5.3737 ms/op
+WorkloadResult  26: 128 op, 696800400.00 ns, 5.4438 ms/op
+WorkloadResult  27: 128 op, 663026900.00 ns, 5.1799 ms/op
+WorkloadResult  28: 128 op, 695829600.00 ns, 5.4362 ms/op
+WorkloadResult  29: 128 op, 688686400.00 ns, 5.3804 ms/op
+WorkloadResult  30: 128 op, 690120900.00 ns, 5.3916 ms/op
+WorkloadResult  31: 128 op, 689311600.00 ns, 5.3852 ms/op
+WorkloadResult  32: 128 op, 682689700.00 ns, 5.3335 ms/op
+WorkloadResult  33: 128 op, 678399100.00 ns, 5.3000 ms/op
+WorkloadResult  34: 128 op, 699882600.00 ns, 5.4678 ms/op
+WorkloadResult  35: 128 op, 678939700.00 ns, 5.3042 ms/op
+WorkloadResult  36: 128 op, 694696500.00 ns, 5.4273 ms/op
+WorkloadResult  37: 128 op, 690772300.00 ns, 5.3967 ms/op
+WorkloadResult  38: 128 op, 692680100.00 ns, 5.4116 ms/op
+WorkloadResult  39: 128 op, 688271600.00 ns, 5.3771 ms/op
+WorkloadResult  40: 128 op, 707131400.00 ns, 5.5245 ms/op
+WorkloadResult  41: 128 op, 680452200.00 ns, 5.3160 ms/op
+WorkloadResult  42: 128 op, 672109900.00 ns, 5.2509 ms/op
+WorkloadResult  43: 128 op, 690857500.00 ns, 5.3973 ms/op
+
+// AfterAll
+// Benchmark Process 9648 has exited with code 0.
+
+Mean = 5.295 ms, StdErr = 0.028 ms (0.52%), N = 43, StdDev = 0.182 ms
+Min = 4.893 ms, Q1 = 5.190 ms, Median = 5.356 ms, Q3 = 5.399 ms, Max = 5.641 ms
+IQR = 0.210 ms, LowerFence = 4.875 ms, UpperFence = 5.714 ms
+ConfidenceInterval = [5.197 ms; 5.393 ms] (CI 99.9%), Margin = 0.098 ms (1.85% of Mean)
+Skewness = -0.47, Kurtosis = 2.39, MValue = 2.38
+
+// ** Remained 0 (0,0 %) benchmark(s) to run. Estimated finish 2024-11-29 14:08 (0h 0m from now) **
+Successfully reverted power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Alto rendimiento)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\Proyecto1.consulaEvaluacionRendimiento.RNEvaluarREndimiento-report.csv
+  BenchmarkDotNet.Artifacts\results\Proyecto1.consulaEvaluacionRendimiento.RNEvaluarREndimiento-report-github.md
+  BenchmarkDotNet.Artifacts\results\Proyecto1.consulaEvaluacionRendimiento.RNEvaluarREndimiento-report.html
+
+// * Detailed results *
+RNEvaluarREndimiento.HolaMundobase: DefaultJob
+Runtime = .NET Framework 4.8.1 (4.8.9282.0), X86 LegacyJIT; GC = Concurrent Workstation
+Mean = 108.463 ms, StdErr = 0.205 ms (0.19%), N = 14, StdDev = 0.767 ms
+Min = 106.913 ms, Q1 = 108.196 ms, Median = 108.328 ms, Q3 = 108.801 ms, Max = 109.881 ms
+IQR = 0.605 ms, LowerFence = 107.288 ms, UpperFence = 109.708 ms
+ConfidenceInterval = [107.598 ms; 109.329 ms] (CI 99.9%), Margin = 0.866 ms (0.80% of Mean)
+Skewness = 0.04, Kurtosis = 2.6, MValue = 2
+-------------------- Histogram --------------------
+[106.495 ms ; 110.299 ms) | @@@@@@@@@@@@@@
+---------------------------------------------------
+
+RNEvaluarREndimiento.HolaMundoRefactorizado: DefaultJob
+Runtime = .NET Framework 4.8.1 (4.8.9282.0), X86 LegacyJIT; GC = Concurrent Workstation
+Mean = 155.694 ms, StdErr = 0.161 ms (0.10%), N = 13, StdDev = 0.579 ms
+Min = 154.584 ms, Q1 = 155.549 ms, Median = 155.788 ms, Q3 = 156.017 ms, Max = 156.750 ms
+IQR = 0.467 ms, LowerFence = 154.849 ms, UpperFence = 156.718 ms
+ConfidenceInterval = [155.001 ms; 156.387 ms] (CI 99.9%), Margin = 0.693 ms (0.45% of Mean)
+Skewness = -0.33, Kurtosis = 2.4, MValue = 2
+-------------------- Histogram --------------------
+[154.261 ms ; 157.073 ms) | @@@@@@@@@@@@@
+---------------------------------------------------
+
+RNEvaluarREndimiento.PruebaPerformRNCliente: DefaultJob
+Runtime = .NET Framework 4.8.1 (4.8.9282.0), X86 LegacyJIT; GC = Concurrent Workstation
+Mean = 5.295 ms, StdErr = 0.028 ms (0.52%), N = 43, StdDev = 0.182 ms
+Min = 4.893 ms, Q1 = 5.190 ms, Median = 5.356 ms, Q3 = 5.399 ms, Max = 5.641 ms
+IQR = 0.210 ms, LowerFence = 4.875 ms, UpperFence = 5.714 ms
+ConfidenceInterval = [5.197 ms; 5.393 ms] (CI 99.9%), Margin = 0.098 ms (1.85% of Mean)
+Skewness = -0.47, Kurtosis = 2.39, MValue = 2.38
+-------------------- Histogram --------------------
+[4.825 ms ; 4.971 ms) | @
+[4.971 ms ; 5.155 ms) | @@@@@@@@@
+[5.155 ms ; 5.296 ms) | @@@@@
+[5.296 ms ; 5.432 ms) | @@@@@@@@@@@@@@@@@@@@@
+[5.432 ms ; 5.562 ms) | @@@@@
+[5.562 ms ; 5.709 ms) | @@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.14.0, Windows 10 (10.0.19045.5131/22H2/2022Update)
+AMD FX-9800P RADEON R7, 12 COMPUTE CORES 4C+8G, 1 CPU, 4 logical and 4 physical cores
+  [Host]     : .NET Framework 4.8.1 (4.8.9282.0), X86 LegacyJIT [AttachedDebugger]
+  DefaultJob : .NET Framework 4.8.1 (4.8.9282.0), X86 LegacyJIT
+
+
+| Method                 | Mean       | Error     | StdDev    | Ratio |
+|----------------------- |-----------:|----------:|----------:|------:|
+| HolaMundobase          | 108.463 ms | 0.8658 ms | 0.7675 ms |  1.00 |
+| HolaMundoRefactorizado | 155.694 ms | 0.6930 ms | 0.5787 ms |  1.44 |
+| PruebaPerformRNCliente |   5.295 ms | 0.0980 ms | 0.1816 ms |  0.05 |
+
+// * Warnings *
+Environment
+  Summary -> Benchmark was executed with attached debugger
+
+// * Hints *
+Outliers
+  RNEvaluarREndimiento.HolaMundobase: Default          -> 1 outlier  was  removed, 2 outliers were detected (106.91 ms, 109.99 ms)
+  RNEvaluarREndimiento.HolaMundoRefactorizado: Default -> 2 outliers were removed, 3 outliers were detected (154.58 ms, 157.14 ms, 157.30 ms)
+  RNEvaluarREndimiento.PruebaPerformRNCliente: Default -> 5 outliers were removed, 6 outliers were detected (4.89 ms, 5.76 ms..6.39 ms)
+
+// * Legends *
+  Mean   : Arithmetic mean of all measurements
+  Error  : Half of 99.9% confidence interval
+  StdDev : Standard deviation of all measurements
+  Ratio  : Mean of the ratio distribution ([Current]/[Baseline])
+  1 ms   : 1 Millisecond (0.001 sec)
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:01:16 (76.82 sec), executed benchmarks: 3
+
+Global total time: 00:01:25 (85.18 sec), executed benchmarks: 3
+// * Artifacts cleanup *
+Artifacts cleanup is finished

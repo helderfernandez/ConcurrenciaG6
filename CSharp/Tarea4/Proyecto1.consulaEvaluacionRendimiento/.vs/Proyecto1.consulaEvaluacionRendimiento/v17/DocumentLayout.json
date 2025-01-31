@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Tarea4\\Proyecto1.consulaEvaluacionRendimiento\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CA1A0BE6-3A76-4C35-A49C-7A73785190D5}|Proyecto1.consulaEvaluacionRendimiento\\Proyecto1.consulaEvaluacionRendimiento.csproj|d:\\tarea4\\proyecto1.consulaevaluacionrendimiento\\proyecto1.consulaevaluacionrendimiento\\rnentero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA1A0BE6-3A76-4C35-A49C-7A73785190D5}|Proyecto1.consulaEvaluacionRendimiento\\Proyecto1.consulaEvaluacionRendimiento.csproj|solutionrelative:proyecto1.consulaevaluacionrendimiento\\rnentero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA1A0BE6-3A76-4C35-A49C-7A73785190D5}|Proyecto1.consulaEvaluacionRendimiento\\Proyecto1.consulaEvaluacionRendimiento.csproj|D:\\Tarea4\\Proyecto1.consulaEvaluacionRendimiento\\proyecto1.consulaevaluacionrendimiento\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA1A0BE6-3A76-4C35-A49C-7A73785190D5}|Proyecto1.consulaEvaluacionRendimiento\\Proyecto1.consulaEvaluacionRendimiento.csproj|solutionrelative:proyecto1.consulaevaluacionrendimiento\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA1A0BE6-3A76-4C35-A49C-7A73785190D5}|Proyecto1.consulaEvaluacionRendimiento\\Proyecto1.consulaEvaluacionRendimiento.csproj|D:\\Tarea4\\Proyecto1.consulaEvaluacionRendimiento\\proyecto1.consulaevaluacionrendimiento\\rnevaluarrendimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA1A0BE6-3A76-4C35-A49C-7A73785190D5}|Proyecto1.consulaEvaluacionRendimiento\\Proyecto1.consulaEvaluacionRendimiento.csproj|solutionrelative:proyecto1.consulaevaluacionrendimiento\\rnevaluarrendimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 367,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RNEntero.cs",
+              "DocumentMoniker": "D:\\Tarea4\\Proyecto1.consulaEvaluacionRendimiento\\Proyecto1.consulaEvaluacionRendimiento\\RNEntero.cs",
+              "RelativeDocumentMoniker": "Proyecto1.consulaEvaluacionRendimiento\\RNEntero.cs",
+              "ToolTip": "D:\\Tarea4\\Proyecto1.consulaEvaluacionRendimiento\\Proyecto1.consulaEvaluacionRendimiento\\RNEntero.cs",
+              "RelativeToolTip": "Proyecto1.consulaEvaluacionRendimiento\\RNEntero.cs",
+              "ViewState": "AQIAAE4AAAAAAAAAAAA7wBIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T22:13:08.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RNEvaluarREndimiento.cs",
+              "DocumentMoniker": "D:\\Tarea4\\Proyecto1.consulaEvaluacionRendimiento\\Proyecto1.consulaEvaluacionRendimiento\\RNEvaluarREndimiento.cs",
+              "RelativeDocumentMoniker": "Proyecto1.consulaEvaluacionRendimiento\\RNEvaluarREndimiento.cs",
+              "ToolTip": "D:\\Tarea4\\Proyecto1.consulaEvaluacionRendimiento\\Proyecto1.consulaEvaluacionRendimiento\\RNEvaluarREndimiento.cs",
+              "RelativeToolTip": "Proyecto1.consulaEvaluacionRendimiento\\RNEvaluarREndimiento.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T19:01:05.161Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Tarea4\\Proyecto1.consulaEvaluacionRendimiento\\Proyecto1.consulaEvaluacionRendimiento\\Program.cs",
+              "RelativeDocumentMoniker": "Proyecto1.consulaEvaluacionRendimiento\\Program.cs",
+              "ToolTip": "D:\\Tarea4\\Proyecto1.consulaEvaluacionRendimiento\\Proyecto1.consulaEvaluacionRendimiento\\Program.cs",
+              "RelativeToolTip": "Proyecto1.consulaEvaluacionRendimiento\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T18:57:11.912Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

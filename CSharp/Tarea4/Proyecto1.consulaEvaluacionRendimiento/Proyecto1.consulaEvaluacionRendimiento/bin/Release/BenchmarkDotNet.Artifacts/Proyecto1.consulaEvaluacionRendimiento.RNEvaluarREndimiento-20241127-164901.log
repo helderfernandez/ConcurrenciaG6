@@ -1,0 +1,92 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 2 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+BuildScript: D:\Tarea4\Proyecto1.consulaEvaluacionRendimiento\Proyecto1.consulaEvaluacionRendimiento\bin\Release\67d9d22d-4f21-4fb6-acc2-9b1f255facd1.bat
+// ***** Done, took 00:00:06 (6.3 sec)   *****
+// Found 2 benchmarks:
+//   RNEvaluarREndimiento.HolaMundobase: DefaultJob
+//   RNEvaluarREndimiento.HolaMundoRefactorizado: DefaultJob
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Alto rendimiento)
+// **************************
+// Benchmark: RNEvaluarREndimiento.HolaMundobase: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: D:\Tarea4\Proyecto1.consulaEvaluacionRendimiento\Proyecto1.consulaEvaluacionRendimiento\bin\Release\67d9d22d-4f21-4fb6-acc2-9b1f255facd1.exe --anonymousPipes 1564 1496 --benchmarkName Proyecto1.consulaEvaluacionRendimiento.RNEvaluarREndimiento.HolaMundobase --job Default --benchmarkId 0 in 
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET Framework 4.8.1 (4.8.9282.0), X86 LegacyJIT
+// GC=Concurrent Workstation
+// HardwareIntrinsics= 
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 272000.00 ns, 272.0000 us/op
+WorkloadJitting  1: 1 op, 1010064000.00 ns, 1.0101 s/op
+
+Hola Mundo Refactorizado!
+OverheadJitting  2: 1 op, 10300.00 ns, 10.3000 us/op
+Hola Mundo Refactorizado!
+WorkloadJitting  2: 1 op, 1004127500.00 ns, 1.0041 s/op
+
+Hola Mundo Refactorizado!
+WorkloadWarmup   1: 1 op, 1008271900.00 ns, 1.0083 s/op
+Hola Mundo Refactorizado!
+WorkloadWarmup   2: 1 op, 1015266000.00 ns, 1.0153 s/op
+Hola Mundo Refactorizado!
+WorkloadWarmup   3: 1 op, 1007425100.00 ns, 1.0074 s/op
+Hola Mundo Refactorizado!
+WorkloadWarmup   4: 1 op, 1010667900.00 ns, 1.0107 s/op
+Hola Mundo Refactorizado!
+WorkloadWarmup   5: 1 op, 1008491500.00 ns, 1.0085 s/op
+Hola Mundo Refactorizado!
+WorkloadWarmup   6: 1 op, 1012148200.00 ns, 1.0121 s/op
+
+// BeforeActualRun
+Hola Mundo Refactorizado!
+WorkloadActual   1: 1 op, 1013049800.00 ns, 1.0130 s/op
+Hola Mundo Refactorizado!
+WorkloadActual   2: 1 op, 1001339400.00 ns, 1.0013 s/op
+Hola Mundo Refactorizado!
+WorkloadActual   3: 1 op, 1009740100.00 ns, 1.0097 s/op
+Hola Mundo Refactorizado!
+WorkloadActual   4: 1 op, 1001848900.00 ns, 1.0018 s/op
+Hola Mundo Refactorizado!
+WorkloadActual   5: 1 op, 1003570000.00 ns, 1.0036 s/op
+Hola Mundo Refactorizado!
+WorkloadActual   6: 1 op, 1007656600.00 ns, 1.0077 s/op
+Hola Mundo Refactorizado!
+WorkloadActual   7: 1 op, 1009077400.00 ns, 1.0091 s/op
+Hola Mundo Refactorizado!
+WorkloadActual   8: 1 op, 1007887800.00 ns, 1.0079 s/op
+Hola Mundo Refactorizado!
+WorkloadActual   9: 1 op, 1008851300.00 ns, 1.0089 s/op
+Hola Mundo Refactorizado!
+WorkloadActual  10: 1 op, 1008959800.00 ns, 1.0090 s/op
+Hola Mundo Refactorizado!
+WorkloadActual  11: 1 op, 1008931000.00 ns, 1.0089 s/op
+Hola Mundo Refactorizado!
+WorkloadActual  12: 1 op, 1006869200.00 ns, 1.0069 s/op
+Hola Mundo Refactorizado!
+WorkloadActual  13: 1 op, 1012116800.00 ns, 1.0121 s/op
+Hola Mundo Refactorizado!
+WorkloadActual  14: 1 op, 1004772400.00 ns, 1.0048 s/op
+Hola Mundo Refactorizado!
+WorkloadActual  15: 1 op, 1005899000.00 ns, 1.0059 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 1013049800.00 ns, 1.0130 s/op
+WorkloadResult   2: 1 op, 1001339400.00 ns, 1.0013 s/op
+WorkloadResult   3: 1 op, 1009740100.00 ns, 1.0097 s/op
+WorkloadResult   4: 1 op, 1001848900.00 ns, 1.0018 s/op
+WorkloadResult   5: 1 op, 1003570000.00 ns, 1.0036 s/op
+WorkloadResult   6: 1 op, 1007656600.00 ns, 1.0077 s/op
+WorkloadResult   7: 1 op, 1009077400.00 ns, 1.0091 s/op
+WorkloadResult   8: 1 op, 1007887800.00 ns, 1.0079 s/op
+WorkloadResult   9: 1 op, 1008851300.00 ns, 1.0089 s/op
+WorkloadResult  10: 1 op, 1008959800.00 ns, 1.0090 s/op
+WorkloadResult  11: 1 op, 1008931000.00 ns, 1.0089 s/op
+WorkloadResult  12: 1 op, 1006869200.00 ns, 1.0069 s/op
+WorkloadResult  13: 1 op, 1012116800.00 ns

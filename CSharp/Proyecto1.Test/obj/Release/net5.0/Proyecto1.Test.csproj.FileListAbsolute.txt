@@ -1,0 +1,5 @@
+D:\Aplicaciones 2024\ProgramacionIV\Proyecto1.Test\obj\Release\net5.0\Proyecto1.Test.csproj.AssemblyReference.cache
+D:\Aplicaciones 2024\ProgramacionIV\Proyecto1.Test\obj\Release\net5.0\Proyecto1.Test.GeneratedMSBuildEditorConfig.editorconfig
+D:\Aplicaciones 2024\ProgramacionIV\Proyecto1.Test\obj\Release\net5.0\Proyecto1.Test.AssemblyInfoInputs.cache
+D:\Aplicaciones 2024\ProgramacionIV\Proyecto1.Test\obj\Release\net5.0\Proyecto1.Test.AssemblyInfo.cs
+D:\Aplicaciones 2024\ProgramacionIV\Proyecto1.Test\obj\Release\net5.0\Proyecto1.Test.csproj.CoreCompileInputs.cache

@@ -1,0 +1,76 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 3 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+BuildScript: D:\Aplicaciones 2024\ProgramacionIV\Tarea4\Proyecto1.consulaEvaluacionRendimiento\Proyecto1.consulaEvaluacionRendimiento\bin\Release\a66c99aa-7ec4-4df1-a55e-48c295d756cd.bat
+// ***** Done, took 00:00:04 (4.83 sec)   *****
+// Found 3 benchmarks:
+//   RNEntero.Primo: DefaultJob
+//   RNEntero.PrimoAsync: DefaultJob
+//   RNEntero.PrimoMultinucleo: DefaultJob
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Alto rendimiento)
+// **************************
+// Benchmark: RNEntero.Primo: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: D:\Aplicaciones 2024\ProgramacionIV\Tarea4\Proyecto1.consulaEvaluacionRendimiento\Proyecto1.consulaEvaluacionRendimiento\bin\Release\a66c99aa-7ec4-4df1-a55e-48c295d756cd.exe --anonymousPipes 1572 1568 --benchmarkName Proyecto1.consulaEvaluacionRendimiento.RNEntero.Primo --job Default --benchmarkId 0 in 
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET Framework 4.8.1 (4.8.9282.0), X86 LegacyJIT
+// GC=Concurrent Workstation
+// HardwareIntrinsics= 
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 386700.00 ns, 386.7000 us/op
+WorkloadJitting  1: 1 op, 514400.00 ns, 514.4000 us/op
+
+OverheadJitting  2: 16 op, 881700.00 ns, 55.1063 us/op
+WorkloadJitting  2: 16 op, 1064500.00 ns, 66.5313 us/op
+
+WorkloadPilot    1: 16 op, 5800.00 ns, 362.5000 ns/op
+WorkloadPilot    2: 32 op, 700.00 ns, 21.8750 ns/op
+WorkloadPilot    3: 64 op, 1000.00 ns, 15.6250 ns/op
+WorkloadPilot    4: 128 op, 1300.00 ns, 10.1563 ns/op
+WorkloadPilot    5: 256 op, 1700.00 ns, 6.6406 ns/op
+WorkloadPilot    6: 512 op, 2600.00 ns, 5.0781 ns/op
+WorkloadPilot    7: 1024 op, 4700.00 ns, 4.5898 ns/op
+WorkloadPilot    8: 2048 op, 7700.00 ns, 3.7598 ns/op
+WorkloadPilot    9: 4096 op, 14000.00 ns, 3.4180 ns/op
+WorkloadPilot   10: 8192 op, 38400.00 ns, 4.6875 ns/op
+WorkloadPilot   11: 16384 op, 53400.00 ns, 3.2593 ns/op
+WorkloadPilot   12: 32768 op, 103800.00 ns, 3.1677 ns/op
+WorkloadPilot   13: 65536 op, 208000.00 ns, 3.1738 ns/op
+WorkloadPilot   14: 131072 op, 414900.00 ns, 3.1654 ns/op
+WorkloadPilot   15: 262144 op, 814500.00 ns, 3.1071 ns/op
+WorkloadPilot   16: 524288 op, 1813000.00 ns, 3.4580 ns/op
+WorkloadPilot   17: 1048576 op, 3596200.00 ns, 3.4296 ns/op
+WorkloadPilot   18: 2097152 op, 6480200.00 ns, 3.0900 ns/op
+WorkloadPilot   19: 4194304 op, 11227000.00 ns, 2.6767 ns/op
+WorkloadPilot   20: 8388608 op, 24050000.00 ns, 2.8670 ns/op
+WorkloadPilot   21: 16777216 op, 43112300.00 ns, 2.5697 ns/op
+WorkloadPilot   22: 33554432 op, 91553600.00 ns, 2.7285 ns/op
+WorkloadPilot   23: 67108864 op, 185441100.00 ns, 2.7633 ns/op
+WorkloadPilot   24: 134217728 op, 355752000.00 ns, 2.6506 ns/op
+WorkloadPilot   25: 268435456 op, 698716100.00 ns, 2.6029 ns/op
+
+OverheadWarmup   1: 268435456 op, 551373800.00 ns, 2.0540 ns/op
+OverheadWarmup   2: 268435456 op, 543594900.00 ns, 2.0250 ns/op
+OverheadWarmup   3: 268435456 op, 544116700.00 ns, 2.0270 ns/op
+OverheadWarmup   4: 268435456 op, 544804900.00 ns, 2.0296 ns/op
+OverheadWarmup   5: 268435456 op, 536890900.00 ns, 2.0001 ns/op
+OverheadWarmup   6: 268435456 op, 545321800.00 ns, 2.0315 ns/op
+OverheadWarmup   7: 268435456 op, 542913400.00 ns, 2.0225 ns/op
+
+OverheadActual   1: 268435456 op, 544742700.00 ns, 2.0293 ns/op
+OverheadActual   2: 268435456 op, 544656000.00 ns, 2.0290 ns/op
+OverheadActual   3: 268435456 op, 545445400.00 ns, 2.0319 ns/op
+OverheadActual   4: 268435456 op, 558277300.00 ns, 2.0797 ns/op
+OverheadActual   5: 268435456 op, 563614300.00 ns, 2.0996 ns/op
+OverheadActual   6: 268435456 op, 589870900.00 ns, 2.1974 ns/op
+OverheadActual   7: 268435456 op, 614638000.00 ns, 2.2897 ns/op
+OverheadActual   8: 268435456 op, 552133000.00 ns, 2.0569 ns/op
+OverheadActual   9: 268435456 op, 546144600.00 ns, 2.0345 ns/op
+OverheadActual  10: 268435456 op, 546932800.00 ns, 

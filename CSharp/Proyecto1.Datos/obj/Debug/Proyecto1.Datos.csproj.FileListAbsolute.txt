@@ -1,0 +1,12 @@
+D:\Aplicaciones 2024\ProgramacionIV\Proyecto1.Datos\bin\Debug\Proyecto1.Datos.dll.config
+D:\Aplicaciones 2024\ProgramacionIV\Proyecto1.Datos\bin\Debug\Proyecto1.Datos.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyecto1.Datos\bin\Debug\Proyecto1.Datos.pdb
+D:\Aplicaciones 2024\ProgramacionIV\Proyecto1.Datos\bin\Debug\EntityFramework.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyecto1.Datos\bin\Debug\EntityFramework.SqlServer.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyecto1.Datos\bin\Debug\EntityFramework.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyecto1.Datos\bin\Debug\EntityFramework.SqlServer.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyecto1.Datos\obj\Debug\Proyecto1.Datos.csproj.AssemblyReference.cache
+D:\Aplicaciones 2024\ProgramacionIV\Proyecto1.Datos\obj\Debug\Proyecto1.Datos.csproj.CoreCompileInputs.cache
+D:\Aplicaciones 2024\ProgramacionIV\Proyecto1.Datos\obj\Debug\Proyecto.5440F001.Up2Date
+D:\Aplicaciones 2024\ProgramacionIV\Proyecto1.Datos\obj\Debug\Proyecto1.Datos.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyecto1.Datos\obj\Debug\Proyecto1.Datos.pdb

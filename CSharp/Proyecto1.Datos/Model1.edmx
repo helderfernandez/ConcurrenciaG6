@@ -1,0 +1,2879 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="dbFinanciaCorpModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AperturaSistema">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" />
+          <Property Name="FechaApertura" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Caja">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" />
+          <Property Name="FechaHoraApertura" Type="datetime" Nullable="false" />
+          <Property Name="FechaHoraCierre" Type="datetime" />
+          <Property Name="DescripcionCaja" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="EstadoCaja" Type="int" />
+          <Property Name="idEmpleado" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CalificacionCartera">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" />
+          <Property Name="NombreCalificacion" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="DiasInicio" Type="int" Nullable="false" />
+          <Property Name="DiasFinal" Type="int" Nullable="false" />
+          <Property Name="DescripcionCalificacion" Type="varchar" MaxLength="90" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cargo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" />
+          <Property Name="NombreCargo" Type="varchar" MaxLength="90" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Ciudad">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" />
+          <Property Name="NombreCiudad" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="idDepartamento" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cliente">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" />
+          <Property Name="Direccion" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="Telefono" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="Telefono2" Type="varchar" MaxLength="90" />
+          <Property Name="Correo" Type="varchar" MaxLength="90" />
+          <Property Name="Nit" Type="bigint" />
+          <Property Name="idrubro" Type="bigint" Nullable="false" />
+          <Property Name="idCiuddad" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Contrato">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" />
+          <Property Name="Parrafo1" Type="varchar(max)" />
+          <Property Name="Parrafo2" Type="varchar(max)" />
+          <Property Name="Parrafo3" Type="varchar(max)" />
+          <Property Name="Parrafo4" Type="varchar(max)" />
+          <Property Name="Parrafo5" Type="varchar(max)" />
+          <Property Name="Parrafo6" Type="varchar(max)" />
+          <Property Name="Parrafo7" Type="varchar(max)" />
+          <Property Name="Parrafo8" Type="varchar(max)" />
+          <Property Name="Parrafo9" Type="varchar(max)" />
+          <Property Name="Parrafo10" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="Cuenta">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" />
+          <Property Name="NombreCuenta" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="FechaApertura" Type="datetime" Nullable="false" />
+          <Property Name="FechaCierre" Type="datetime" />
+          <Property Name="EstadoCuenta" Type="int" Nullable="false" />
+          <Property Name="idEmpleado" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CuentaBancaria">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" />
+          <Property Name="NroCuenta" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="Moneda" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="FechaApertura" Type="datetime" />
+          <Property Name="NombrecompletoTitular1" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="NombreCompletoTitular2" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="idEmpleado" Type="bigint" Nullable="false" />
+          <Property Name="idEntidadFinanciera" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cuota">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" />
+          <Property Name="MontoCapital" Type="float" Nullable="false" />
+          <Property Name="MontoInteres" Type="float" Nullable="false" />
+          <Property Name="MontoDescuento" Type="float" Nullable="false" />
+          <Property Name="FechaPagoProgramado" Type="datetime" Nullable="false" />
+          <Property Name="FechaPago" Type="datetime" />
+          <Property Name="DiasCuota" Type="int" />
+          <Property Name="SwGeneroProximaCuota" Type="int" />
+          <Property Name="idPrestamos" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Departamento">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" />
+          <Property Name="NombreDepartamento" Type="varchar" MaxLength="90" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Empleado">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" />
+          <Property Name="NombreEmpleado" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="DocumentoIdentidad" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="Usuario" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="Contrasena" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="FechaNacimiento" Type="datetime" />
+          <Property Name="idCargo" Type="bigint" Nullable="false" />
+          <Property Name="idSucursal" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EntidadFinanciera">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" />
+          <Property Name="NombreEntidad" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="Direccion" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="Telefono" Type="varchar" MaxLength="90" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Garantia">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" />
+          <Property Name="NombreGarantia" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="PrecioGarantia" Type="float" />
+          <Property Name="PrecioVenta" Type="float" />
+          <Property Name="idPrestamo" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HTransaccion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" />
+          <Property Name="Monto" Type="float" Nullable="false" />
+          <Property Name="FechaHora" Type="datetime" Nullable="false" />
+          <Property Name="GlozaTransaccion" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="idCaja" Type="bigint" Nullable="false" />
+          <Property Name="idEmpleado" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Natural">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" />
+          <Property Name="NombreCliente" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="ApellidoPaterno" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="ApellidoMaterno" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="Genero" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="FechaNacimiento" Type="datetime" />
+          <Property Name="DocumentoIdentidad" Type="varchar" MaxLength="90" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Pago">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" />
+          <Property Name="Monto" Type="float" Nullable="false" />
+          <Property Name="FechaHoraPago" Type="datetime" Nullable="false" />
+          <Property Name="Gloza" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="idCuota" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Prestamo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" />
+          <Property Name="Monto" Type="float" Nullable="false" />
+          <Property Name="FechaDesembolzo" Type="datetime" />
+          <Property Name="InteresMensual" Type="float" Nullable="false" />
+          <Property Name="PlazoMeses" Type="float" Nullable="false" />
+          <Property Name="EstadoPrestamo" Type="int" />
+          <Property Name="idcliente" Type="bigint" Nullable="false" />
+          <Property Name="idEmpleado" Type="bigint" Nullable="false" />
+          <Property Name="idCalificacionCArtera" Type="bigint" Nullable="false" />
+          <Property Name="idtipoDesembolso" Type="bigint" />
+        </EntityType>
+        <EntityType Name="Rubro">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" />
+          <Property Name="NombreRubro" Type="varchar" MaxLength="90" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sucursal">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" />
+          <Property Name="NombreSucursal" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="Direccion" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="Telefono" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="LogoEmpresa" Type="varbinary(max)" />
+          <Property Name="PaginaWeb" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="NroNit" Type="varchar" MaxLength="90" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TbResumenPrestamo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" />
+          <Property Name="Monto" Type="float" Nullable="false" />
+          <Property Name="FechaDesembolzo" Type="datetime" />
+          <Property Name="InteresMensual" Type="float" Nullable="false" />
+          <Property Name="PlazoMeses" Type="float" Nullable="false" />
+          <Property Name="EstadoPrestamo" Type="int" />
+          <Property Name="idcliente" Type="bigint" Nullable="false" />
+          <Property Name="NombreCompletoCliente" Type="varchar" MaxLength="300" />
+          <Property Name="idEmpleado" Type="bigint" Nullable="false" />
+          <Property Name="idCalificacionCArtera" Type="bigint" Nullable="false" />
+          <Property Name="NombreCalificacionCArtera" Type="varchar" MaxLength="200" />
+          <Property Name="NroCuotasPendiente" Type="int" />
+          <Property Name="TotalMontoInteresPendiente" Type="float" />
+          <Property Name="NroCuotasPagadas" Type="int" />
+          <Property Name="TotalMontoInteresCancelado" Type="float" />
+          <Property Name="GararantiaDescripcion" Type="varchar(max)" />
+          <Property Name="FechaPagoCuota1erCuota" Type="datetime" />
+          <Property Name="FechaPagoCuotaUltimaCuota" Type="datetime" />
+          <Property Name="TotalDeudaGeneral" Type="float" />
+        </EntityType>
+        <EntityType Name="TipoDesembolso">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" />
+          <Property Name="NombreTipoDesembolso" Type="varchar" MaxLength="90" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Transaccion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" />
+          <Property Name="Monto" Type="float" Nullable="false" />
+          <Property Name="FechaHora" Type="datetime" Nullable="false" />
+          <Property Name="GlozaTransaccion" Type="varchar(max)" />
+          <Property Name="idCaja" Type="bigint" Nullable="false" />
+          <Property Name="TipoTransaccion" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="TransaccionCuenta">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" />
+          <Property Name="Monto" Type="float" />
+          <Property Name="FechaHora" Type="datetime" />
+          <Property Name="Gloza" Type="varchar(max)" />
+          <Property Name="TipoTransaccion" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="idCuenta" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TransaccionCuentaBancaria">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" />
+          <Property Name="FechaTranscaccion" Type="datetime" />
+          <Property Name="Monto" Type="float" Nullable="false" />
+          <Property Name="GlosaTransaccion" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="ResponsableTransaccion" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="TipoTransaccion" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="idcuentaBancaria" Type="bigint" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'dbFinanciaCorp.dbo.VclienteGeneral' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="VclienteGeneral">
+          <Key>
+            <PropertyRef Name="idcliente" />
+            <PropertyRef Name="NombreCliente" />
+            <PropertyRef Name="Genero" />
+            <PropertyRef Name="DocumentoIdentidad" />
+            <PropertyRef Name="Direccion" />
+            <PropertyRef Name="NombreRubro" />
+            <PropertyRef Name="NombreDepartamento" />
+            <PropertyRef Name="NombreCiudad" />
+          </Key>
+          <Property Name="idcliente" Type="bigint" Nullable="false" />
+          <Property Name="NombreCliente" Type="varchar" MaxLength="272" Nullable="false" />
+          <Property Name="Genero" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="FechaNacimiento" Type="date" />
+          <Property Name="DocumentoIdentidad" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="Direccion" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="Telefono" Type="varchar" MaxLength="181" />
+          <Property Name="Correo" Type="varchar" MaxLength="90" />
+          <Property Name="Nit" Type="bigint" />
+          <Property Name="NombreRubro" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="NombreDepartamento" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="NombreCiudad" Type="varchar" MaxLength="90" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'dbFinanciaCorp.dbo.VCuentaBancaria' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="VCuentaBancaria">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="NombreEntidad" />
+            <PropertyRef Name="NroCuenta" />
+            <PropertyRef Name="NombrecompletoTitular1" />
+            <PropertyRef Name="NombreCompletoTitular2" />
+            <PropertyRef Name="Moneda" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" />
+          <Property Name="NombreEntidad" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="NroCuenta" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="NombrecompletoTitular1" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="NombreCompletoTitular2" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="Moneda" Type="varchar" MaxLength="90" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'dbFinanciaCorp.dbo.VCuentaBancariaTransaccion' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="VCuentaBancariaTransaccion">
+          <Key>
+            <PropertyRef Name="idtransaccionBancaria" />
+            <PropertyRef Name="NombreEntidad" />
+            <PropertyRef Name="NroCuenta" />
+            <PropertyRef Name="NombrecompletoTitular1" />
+            <PropertyRef Name="NombreCompletoTitular2" />
+            <PropertyRef Name="Moneda" />
+            <PropertyRef Name="Monto" />
+            <PropertyRef Name="ResponsableTransaccion" />
+            <PropertyRef Name="TipoTransaccion" />
+            <PropertyRef Name="GlosaTransaccion" />
+          </Key>
+          <Property Name="idtransaccionBancaria" Type="bigint" Nullable="false" />
+          <Property Name="NombreEntidad" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="NroCuenta" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="NombrecompletoTitular1" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="NombreCompletoTitular2" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="Moneda" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="FechaTranscaccion" Type="datetime" />
+          <Property Name="Monto" Type="float" Nullable="false" />
+          <Property Name="ResponsableTransaccion" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="TipoTransaccion" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="GlosaTransaccion" Type="varchar" MaxLength="250" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'dbFinanciaCorp.dbo.VGPrestamo' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="VGPrestamo">
+          <Key>
+            <PropertyRef Name="idprestamo" />
+            <PropertyRef Name="Monto" />
+            <PropertyRef Name="InteresMensual" />
+            <PropertyRef Name="PlazoMeses" />
+            <PropertyRef Name="idcliente" />
+            <PropertyRef Name="NombreCliente" />
+            <PropertyRef Name="Genero" />
+            <PropertyRef Name="DocumentoIdentidad" />
+            <PropertyRef Name="Direccion" />
+            <PropertyRef Name="NombreRubro" />
+            <PropertyRef Name="NombreDepartamento" />
+            <PropertyRef Name="NombreCiudad" />
+            <PropertyRef Name="idcuota" />
+            <PropertyRef Name="MontoCapitalCuota" />
+            <PropertyRef Name="MontoInteres" />
+            <PropertyRef Name="MontoDescuento" />
+          </Key>
+          <Property Name="idprestamo" Type="bigint" Nullable="false" />
+          <Property Name="Monto" Type="float" Nullable="false" />
+          <Property Name="FechaDesembolzo" Type="date" />
+          <Property Name="InteresMensual" Type="float" Nullable="false" />
+          <Property Name="PlazoMeses" Type="float" Nullable="false" />
+          <Property Name="EstadoPrestamo" Type="int" />
+          <Property Name="idcliente" Type="bigint" Nullable="false" />
+          <Property Name="NombreCliente" Type="varchar" MaxLength="272" Nullable="false" />
+          <Property Name="Genero" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="FechaNacimiento" Type="date" />
+          <Property Name="DocumentoIdentidad" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="Direccion" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="Telefono" Type="varchar" MaxLength="181" />
+          <Property Name="Correo" Type="varchar" MaxLength="90" />
+          <Property Name="Nit" Type="bigint" />
+          <Property Name="NombreRubro" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="NombreDepartamento" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="NombreCiudad" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="idcuota" Type="bigint" Nullable="false" />
+          <Property Name="MontoCapitalCuota" Type="float" Nullable="false" />
+          <Property Name="MontoInteres" Type="float" Nullable="false" />
+          <Property Name="MontoDescuento" Type="float" Nullable="false" />
+          <Property Name="FechaPagoProgramado" Type="date" />
+          <Property Name="FechaPago" Type="datetime" />
+          <Property Name="idGarantia" Type="bigint" />
+          <Property Name="NombreGarantia" Type="varchar" MaxLength="90" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="200" />
+          <Property Name="PrecioGarantia" Type="float" />
+          <Property Name="PrecioVenta" Type="float" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'dbFinanciaCorp.dbo.VistaCajaTransaccion' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="VistaCajaTransaccion">
+          <Key>
+            <PropertyRef Name="idcaja" />
+            <PropertyRef Name="NombreEmpleado" />
+            <PropertyRef Name="idtransaccion" />
+            <PropertyRef Name="Monto" />
+            <PropertyRef Name="FechaHora" />
+            <PropertyRef Name="GlozaTransaccion" />
+          </Key>
+          <Property Name="idcaja" Type="bigint" Nullable="false" />
+          <Property Name="NombreEmpleado" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="idtransaccion" Type="bigint" Nullable="false" />
+          <Property Name="Monto" Type="float" Nullable="false" />
+          <Property Name="FechaHora" Type="datetime" Nullable="false" />
+          <Property Name="GlozaTransaccion" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="tipoTRansaccion" Type="varchar(max)" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'dbFinanciaCorp.dbo.VMensajeria' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="VMensajeria">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="Monto" />
+            <PropertyRef Name="InteresMensual" />
+            <PropertyRef Name="PlazoMeses" />
+            <PropertyRef Name="idcliente" />
+            <PropertyRef Name="idEmpleado" />
+            <PropertyRef Name="idCalificacionCArtera" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" />
+          <Property Name="Monto" Type="float" Nullable="false" />
+          <Property Name="FechaDesembolzo" Type="datetime" />
+          <Property Name="InteresMensual" Type="float" Nullable="false" />
+          <Property Name="PlazoMeses" Type="float" Nullable="false" />
+          <Property Name="EstadoPrestamo" Type="int" />
+          <Property Name="idcliente" Type="bigint" Nullable="false" />
+          <Property Name="NombreCompletoCliente" Type="varchar" MaxLength="300" />
+          <Property Name="idEmpleado" Type="bigint" Nullable="false" />
+          <Property Name="idCalificacionCArtera" Type="bigint" Nullable="false" />
+          <Property Name="NombreCalificacionCArtera" Type="varchar" MaxLength="200" />
+          <Property Name="NroCuotasPendiente" Type="int" />
+          <Property Name="TotalMontoInteresPendiente" Type="float" />
+          <Property Name="NroCuotasPagadas" Type="int" />
+          <Property Name="TotalMontoInteresCancelado" Type="float" />
+          <Property Name="GararantiaDescripcion" Type="varchar(max)" />
+          <Property Name="FechaPagoCuota1erCuota" Type="datetime" />
+          <Property Name="FechaPagoCuotaUltimaCuota" Type="datetime" />
+          <Property Name="TotalDeudaGeneral" Type="float" />
+          <Property Name="Telefono" Type="varchar" MaxLength="181" />
+          <Property Name="MensajeCobranza" Type="varchar" MaxLength="365" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'dbFinanciaCorp.dbo.VPrestamoCuotaCalificacion' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="VPrestamoCuotaCalificacion">
+          <Key>
+            <PropertyRef Name="idprestamo" />
+            <PropertyRef Name="monto" />
+            <PropertyRef Name="NombreCliente" />
+            <PropertyRef Name="NombreCalificacion" />
+            <PropertyRef Name="nroCuotaPendiente" />
+            <PropertyRef Name="TotalInteresPendiente" />
+            <PropertyRef Name="NroCuotaCancelada" />
+            <PropertyRef Name="TotalInteresCAncelado" />
+          </Key>
+          <Property Name="idprestamo" Type="bigint" Nullable="false" />
+          <Property Name="monto" Type="float" Nullable="false" />
+          <Property Name="FechaDesembolzo" Type="date" />
+          <Property Name="NombreCliente" Type="varchar" MaxLength="272" Nullable="false" />
+          <Property Name="Telefono" Type="varchar" MaxLength="181" />
+          <Property Name="NombreCalificacion" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="nroCuotaPendiente" Type="int" Nullable="false" />
+          <Property Name="TotalInteresPendiente" Type="float" Nullable="false" />
+          <Property Name="NroCuotaCancelada" Type="int" Nullable="false" />
+          <Property Name="TotalInteresCAncelado" Type="float" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'dbFinanciaCorp.dbo.VPrestamoCuotaCalificacionEstadoCuotaCanceladas' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="VPrestamoCuotaCalificacionEstadoCuotaCanceladas">
+          <Key>
+            <PropertyRef Name="idprestamo" />
+            <PropertyRef Name="Monto" />
+            <PropertyRef Name="InteresMensual" />
+            <PropertyRef Name="PlazoMeses" />
+            <PropertyRef Name="idcliente" />
+            <PropertyRef Name="NombreCliente" />
+            <PropertyRef Name="EstadoCuota" />
+            <PropertyRef Name="idCalificacion" />
+            <PropertyRef Name="NombreCalificacion" />
+          </Key>
+          <Property Name="idprestamo" Type="bigint" Nullable="false" />
+          <Property Name="Monto" Type="float" Nullable="false" />
+          <Property Name="FechaDesembolzo" Type="date" />
+          <Property Name="InteresMensual" Type="float" Nullable="false" />
+          <Property Name="PlazoMeses" Type="float" Nullable="false" />
+          <Property Name="EstadoPrestamo" Type="int" />
+          <Property Name="idcliente" Type="bigint" Nullable="false" />
+          <Property Name="NombreCliente" Type="varchar" MaxLength="272" Nullable="false" />
+          <Property Name="Telefono" Type="varchar" MaxLength="181" />
+          <Property Name="totalInteres" Type="float" />
+          <Property Name="NroCuota" Type="int" />
+          <Property Name="EstadoCuota" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="idCalificacion" Type="bigint" Nullable="false" />
+          <Property Name="NombreCalificacion" Type="varchar" MaxLength="90" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'dbFinanciaCorp.dbo.VPrestamoCuotaCalificacionEstadoCuotaPendiente' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="VPrestamoCuotaCalificacionEstadoCuotaPendiente">
+          <Key>
+            <PropertyRef Name="idprestamo" />
+            <PropertyRef Name="Monto" />
+            <PropertyRef Name="InteresMensual" />
+            <PropertyRef Name="PlazoMeses" />
+            <PropertyRef Name="idcliente" />
+            <PropertyRef Name="NombreCliente" />
+            <PropertyRef Name="EstadoCuota" />
+            <PropertyRef Name="idCalificacion" />
+            <PropertyRef Name="NombreCalificacion" />
+          </Key>
+          <Property Name="idprestamo" Type="bigint" Nullable="false" />
+          <Property Name="Monto" Type="float" Nullable="false" />
+          <Property Name="FechaDesembolzo" Type="date" />
+          <Property Name="InteresMensual" Type="float" Nullable="false" />
+          <Property Name="PlazoMeses" Type="float" Nullable="false" />
+          <Property Name="EstadoPrestamo" Type="int" />
+          <Property Name="idcliente" Type="bigint" Nullable="false" />
+          <Property Name="NombreCliente" Type="varchar" MaxLength="272" Nullable="false" />
+          <Property Name="Telefono" Type="varchar" MaxLength="181" />
+          <Property Name="totalInteres" Type="float" />
+          <Property Name="NroCuota" Type="int" />
+          <Property Name="EstadoCuota" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="idCalificacion" Type="bigint" Nullable="false" />
+          <Property Name="NombreCalificacion" Type="varchar" MaxLength="90" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'dbFinanciaCorp.dbo.VPrestamoCuotas' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="VPrestamoCuotas">
+          <Key>
+            <PropertyRef Name="PlazoMeses" />
+            <PropertyRef Name="NombreCalificacion" />
+            <PropertyRef Name="idcliente" />
+            <PropertyRef Name="NombreCliente" />
+            <PropertyRef Name="Genero" />
+            <PropertyRef Name="DocumentoIdentidad" />
+            <PropertyRef Name="Direccion" />
+            <PropertyRef Name="NombreRubro" />
+            <PropertyRef Name="NombreDepartamento" />
+            <PropertyRef Name="NombreCiudad" />
+            <PropertyRef Name="idcuota" />
+            <PropertyRef Name="MontoCapitalCuota" />
+            <PropertyRef Name="MontoInteres" />
+            <PropertyRef Name="MontoDescuento" />
+            <PropertyRef Name="FechaPagoProgramado" />
+          </Key>
+          <Property Name="idprestamo" Type="varchar" MaxLength="20" />
+          <Property Name="monto" Type="varchar" MaxLength="20" />
+          <Property Name="FechaDesembolzo" Type="date" />
+          <Property Name="interesMensual" Type="varchar" MaxLength="20" />
+          <Property Name="PlazoMeses" Type="float" Nullable="false" />
+          <Property Name="EstadoPrestamo" Type="int" />
+          <Property Name="NombreCalificacion" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="idcliente" Type="bigint" Nullable="false" />
+          <Property Name="NombreCliente" Type="varchar" MaxLength="272" Nullable="false" />
+          <Property Name="Genero" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="FechaNacimiento" Type="date" />
+          <Property Name="DocumentoIdentidad" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="Direccion" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="Telefono" Type="varchar" MaxLength="181" />
+          <Property Name="Correo" Type="varchar" MaxLength="90" />
+          <Property Name="Nit" Type="bigint" />
+          <Property Name="NombreRubro" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="NombreDepartamento" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="NombreCiudad" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="idcuota" Type="bigint" Nullable="false" />
+          <Property Name="MontoCapitalCuota" Type="float" Nullable="false" />
+          <Property Name="MontoInteres" Type="float" Nullable="false" />
+          <Property Name="MontoDescuento" Type="float" Nullable="false" />
+          <Property Name="FechaPagoProgramado" Type="datetime" Nullable="false" />
+          <Property Name="FechaPago" Type="datetime" />
+          <Property Name="DiasCuota" Type="int" />
+          <Property Name="swGeneroProximaCuota" Type="int" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'dbFinanciaCorp.dbo.VPrestamoCuotasVigente' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="VPrestamoCuotasVigente">
+          <Key>
+            <PropertyRef Name="idprestamo" />
+            <PropertyRef Name="Monto" />
+            <PropertyRef Name="InteresMensual" />
+            <PropertyRef Name="PlazoMeses" />
+            <PropertyRef Name="idcliente" />
+            <PropertyRef Name="NombreCliente" />
+            <PropertyRef Name="Genero" />
+            <PropertyRef Name="DocumentoIdentidad" />
+            <PropertyRef Name="Direccion" />
+            <PropertyRef Name="NombreRubro" />
+            <PropertyRef Name="NombreDepartamento" />
+            <PropertyRef Name="NombreCiudad" />
+            <PropertyRef Name="idcuota" />
+            <PropertyRef Name="MontoCapitalCuota" />
+            <PropertyRef Name="MontoInteres" />
+            <PropertyRef Name="MontoDescuento" />
+            <PropertyRef Name="FechaPagoProgramado" />
+          </Key>
+          <Property Name="idprestamo" Type="bigint" Nullable="false" />
+          <Property Name="Monto" Type="float" Nullable="false" />
+          <Property Name="FechaDesembolzo" Type="date" />
+          <Property Name="InteresMensual" Type="float" Nullable="false" />
+          <Property Name="PlazoMeses" Type="float" Nullable="false" />
+          <Property Name="EstadoPrestamo" Type="int" />
+          <Property Name="idcliente" Type="bigint" Nullable="false" />
+          <Property Name="NombreCliente" Type="varchar" MaxLength="272" Nullable="false" />
+          <Property Name="Genero" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="FechaNacimiento" Type="date" />
+          <Property Name="DocumentoIdentidad" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="Direccion" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="Telefono" Type="varchar" MaxLength="181" />
+          <Property Name="Correo" Type="varchar" MaxLength="90" />
+          <Property Name="Nit" Type="bigint" />
+          <Property Name="NombreRubro" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="NombreDepartamento" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="NombreCiudad" Type="varchar" MaxLength="90" Nullable="false" />
+          <Property Name="idcuota" Type="bigint" Nullable="false" />
+          <Property Name="MontoCapitalCuota" Type="float" Nullable="false" />
+          <Property Name="MontoInteres" Type="float" Nullable="false" />
+          <Property Name="MontoDescuento" Type="float" Nullable="false" />
+          <Property Name="FechaPagoProgramado" Type="datetime" Nullable="false" />
+          <Property Name="FechaPago" Type="datetime" />
+          <Property Name="DiasCuota" Type="int" />
+          <Property Name="swGeneroProximaCuota" Type="int" />
+        </EntityType>
+        <Association Name="FK__Caja__idEmpleado__2E1BDC42">
+          <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
+          <End Role="Caja" Type="Self.Caja" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empleado">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Caja">
+              <PropertyRef Name="idEmpleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Ciudad__idDepart__145C0A3F">
+          <End Role="Departamento" Type="Self.Departamento" Multiplicity="1" />
+          <End Role="Ciudad" Type="Self.Ciudad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departamento">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Ciudad">
+              <PropertyRef Name="idDepartamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Cliente__idCiudd__182C9B23">
+          <End Role="Ciudad" Type="Self.Ciudad" Multiplicity="1" />
+          <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ciudad">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cliente">
+              <PropertyRef Name="idCiuddad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Cliente__idrubro__173876EA">
+          <End Role="Rubro" Type="Self.Rubro" Multiplicity="1" />
+          <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rubro">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cliente">
+              <PropertyRef Name="idrubro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Cuenta__idEmplea__3C34F16F">
+          <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
+          <End Role="Cuenta" Type="Self.Cuenta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empleado">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cuenta">
+              <PropertyRef Name="idEmpleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CuentaBan__idEmp__2B0A656D">
+          <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
+          <End Role="CuentaBancaria" Type="Self.CuentaBancaria" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empleado">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CuentaBancaria">
+              <PropertyRef Name="idEmpleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CuentaBan__idEnt__2BFE89A6">
+          <End Role="EntidadFinanciera" Type="Self.EntidadFinanciera" Multiplicity="1" />
+          <End Role="CuentaBancaria" Type="Self.CuentaBancaria" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EntidadFinanciera">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CuentaBancaria">
+              <PropertyRef Name="idEntidadFinanciera" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Cuota__idPrestam__45F365D3">
+          <End Role="Prestamo" Type="Self.Prestamo" Multiplicity="1" />
+          <End Role="Cuota" Type="Self.Cuota" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Prestamo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cuota">
+              <PropertyRef Name="idPrestamos" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Empleado__idCarg__2A4B4B5E">
+          <End Role="Cargo" Type="Self.Cargo" Multiplicity="1" />
+          <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cargo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Empleado">
+              <PropertyRef Name="idCargo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Empleado__idSucu__2B3F6F97">
+          <End Role="Sucursal" Type="Self.Sucursal" Multiplicity="1" />
+          <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sucursal">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Empleado">
+              <PropertyRef Name="idSucursal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Garantia__idPres__4BAC3F29">
+          <End Role="Prestamo" Type="Self.Prestamo" Multiplicity="1" />
+          <End Role="Garantia" Type="Self.Garantia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Prestamo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Garantia">
+              <PropertyRef Name="idPrestamo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HTransacc__idCaj__33D4B598">
+          <End Role="Caja" Type="Self.Caja" Multiplicity="1" />
+          <End Role="HTransaccion" Type="Self.HTransaccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Caja">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HTransaccion">
+              <PropertyRef Name="idCaja" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HTransacc__idEmp__34C8D9D1">
+          <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
+          <End Role="HTransaccion" Type="Self.HTransaccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empleado">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HTransaccion">
+              <PropertyRef Name="idEmpleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Natural__id__1B0907CE">
+          <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+          <End Role="Natural" Type="Self.Natural" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Cliente">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Natural">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Pago__idCuota__48CFD27E">
+          <End Role="Cuota" Type="Self.Cuota" Multiplicity="1" />
+          <End Role="Pago" Type="Self.Pago" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cuota">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Pago">
+              <PropertyRef Name="idCuota" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Prestamo__idCali__4222D4EF">
+          <End Role="CalificacionCartera" Type="Self.CalificacionCartera" Multiplicity="1" />
+          <End Role="Prestamo" Type="Self.Prestamo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CalificacionCartera">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Prestamo">
+              <PropertyRef Name="idCalificacionCArtera" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Prestamo__idclie__403A8C7D">
+          <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+          <End Role="Prestamo" Type="Self.Prestamo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cliente">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Prestamo">
+              <PropertyRef Name="idcliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Prestamo__idEmpl__412EB0B6">
+          <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
+          <End Role="Prestamo" Type="Self.Prestamo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empleado">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Prestamo">
+              <PropertyRef Name="idEmpleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Prestamo__idtipo__339FAB6E">
+          <End Role="TipoDesembolso" Type="Self.TipoDesembolso" Multiplicity="0..1" />
+          <End Role="Prestamo" Type="Self.Prestamo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoDesembolso">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Prestamo">
+              <PropertyRef Name="idtipoDesembolso" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Transacci__idCaj__30F848ED">
+          <End Role="Caja" Type="Self.Caja" Multiplicity="1" />
+          <End Role="Transaccion" Type="Self.Transaccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Caja">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Transaccion">
+              <PropertyRef Name="idCaja" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Transacci__idcue__2EDAF651">
+          <End Role="CuentaBancaria" Type="Self.CuentaBancaria" Multiplicity="1" />
+          <End Role="TransaccionCuentaBancaria" Type="Self.TransaccionCuentaBancaria" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CuentaBancaria">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="TransaccionCuentaBancaria">
+              <PropertyRef Name="idcuentaBancaria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Transacci__idCue__3F115E1A">
+          <End Role="Cuenta" Type="Self.Cuenta" Multiplicity="1" />
+          <End Role="TransaccionCuenta" Type="Self.TransaccionCuenta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cuenta">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="TransaccionCuenta">
+              <PropertyRef Name="idCuenta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="sp_IniciarBasededatos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="dbFinanciaCorpModelStoreContainer">
+          <EntitySet Name="AperturaSistema" EntityType="Self.AperturaSistema" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Caja" EntityType="Self.Caja" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CalificacionCartera" EntityType="Self.CalificacionCartera" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cargo" EntityType="Self.Cargo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ciudad" EntityType="Self.Ciudad" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contrato" EntityType="Self.Contrato" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cuenta" EntityType="Self.Cuenta" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CuentaBancaria" EntityType="Self.CuentaBancaria" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cuota" EntityType="Self.Cuota" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Departamento" EntityType="Self.Departamento" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Empleado" EntityType="Self.Empleado" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EntidadFinanciera" EntityType="Self.EntidadFinanciera" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Garantia" EntityType="Self.Garantia" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HTransaccion" EntityType="Self.HTransaccion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Natural" EntityType="Self.Natural" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pago" EntityType="Self.Pago" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Prestamo" EntityType="Self.Prestamo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Rubro" EntityType="Self.Rubro" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sucursal" EntityType="Self.Sucursal" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TbResumenPrestamo" EntityType="Self.TbResumenPrestamo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TipoDesembolso" EntityType="Self.TipoDesembolso" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Transaccion" EntityType="Self.Transaccion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TransaccionCuenta" EntityType="Self.TransaccionCuenta" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TransaccionCuentaBancaria" EntityType="Self.TransaccionCuentaBancaria" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VclienteGeneral" EntityType="Self.VclienteGeneral" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VclienteGeneral].[idcliente] AS [idcliente], 
+    [VclienteGeneral].[NombreCliente] AS [NombreCliente], 
+    [VclienteGeneral].[Genero] AS [Genero], 
+    [VclienteGeneral].[FechaNacimiento] AS [FechaNacimiento], 
+    [VclienteGeneral].[DocumentoIdentidad] AS [DocumentoIdentidad], 
+    [VclienteGeneral].[Direccion] AS [Direccion], 
+    [VclienteGeneral].[Telefono] AS [Telefono], 
+    [VclienteGeneral].[Correo] AS [Correo], 
+    [VclienteGeneral].[Nit] AS [Nit], 
+    [VclienteGeneral].[NombreRubro] AS [NombreRubro], 
+    [VclienteGeneral].[NombreDepartamento] AS [NombreDepartamento], 
+    [VclienteGeneral].[NombreCiudad] AS [NombreCiudad]
+    FROM [dbo].[VclienteGeneral] AS [VclienteGeneral]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VCuentaBancaria" EntityType="Self.VCuentaBancaria" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VCuentaBancaria].[id] AS [id], 
+    [VCuentaBancaria].[NombreEntidad] AS [NombreEntidad], 
+    [VCuentaBancaria].[NroCuenta] AS [NroCuenta], 
+    [VCuentaBancaria].[NombrecompletoTitular1] AS [NombrecompletoTitular1], 
+    [VCuentaBancaria].[NombreCompletoTitular2] AS [NombreCompletoTitular2], 
+    [VCuentaBancaria].[Moneda] AS [Moneda]
+    FROM [dbo].[VCuentaBancaria] AS [VCuentaBancaria]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VCuentaBancariaTransaccion" EntityType="Self.VCuentaBancariaTransaccion" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VCuentaBancariaTransaccion].[idtransaccionBancaria] AS [idtransaccionBancaria], 
+    [VCuentaBancariaTransaccion].[NombreEntidad] AS [NombreEntidad], 
+    [VCuentaBancariaTransaccion].[NroCuenta] AS [NroCuenta], 
+    [VCuentaBancariaTransaccion].[NombrecompletoTitular1] AS [NombrecompletoTitular1], 
+    [VCuentaBancariaTransaccion].[NombreCompletoTitular2] AS [NombreCompletoTitular2], 
+    [VCuentaBancariaTransaccion].[Moneda] AS [Moneda], 
+    [VCuentaBancariaTransaccion].[FechaTranscaccion] AS [FechaTranscaccion], 
+    [VCuentaBancariaTransaccion].[Monto] AS [Monto], 
+    [VCuentaBancariaTransaccion].[ResponsableTransaccion] AS [ResponsableTransaccion], 
+    [VCuentaBancariaTransaccion].[TipoTransaccion] AS [TipoTransaccion], 
+    [VCuentaBancariaTransaccion].[GlosaTransaccion] AS [GlosaTransaccion]
+    FROM [dbo].[VCuentaBancariaTransaccion] AS [VCuentaBancariaTransaccion]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VGPrestamo" EntityType="Self.VGPrestamo" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VGPrestamo].[idprestamo] AS [idprestamo], 
+    [VGPrestamo].[Monto] AS [Monto], 
+    [VGPrestamo].[FechaDesembolzo] AS [FechaDesembolzo], 
+    [VGPrestamo].[InteresMensual] AS [InteresMensual], 
+    [VGPrestamo].[PlazoMeses] AS [PlazoMeses], 
+    [VGPrestamo].[EstadoPrestamo] AS [EstadoPrestamo], 
+    [VGPrestamo].[idcliente] AS [idcliente], 
+    [VGPrestamo].[NombreCliente] AS [NombreCliente], 
+    [VGPrestamo].[Genero] AS [Genero], 
+    [VGPrestamo].[FechaNacimiento] AS [FechaNacimiento], 
+    [VGPrestamo].[DocumentoIdentidad] AS [DocumentoIdentidad], 
+    [VGPrestamo].[Direccion] AS [Direccion], 
+    [VGPrestamo].[Telefono] AS [Telefono], 
+    [VGPrestamo].[Correo] AS [Correo], 
+    [VGPrestamo].[Nit] AS [Nit], 
+    [VGPrestamo].[NombreRubro] AS [NombreRubro], 
+    [VGPrestamo].[NombreDepartamento] AS [NombreDepartamento], 
+    [VGPrestamo].[NombreCiudad] AS [NombreCiudad], 
+    [VGPrestamo].[idcuota] AS [idcuota], 
+    [VGPrestamo].[MontoCapitalCuota] AS [MontoCapitalCuota], 
+    [VGPrestamo].[MontoInteres] AS [MontoInteres], 
+    [VGPrestamo].[MontoDescuento] AS [MontoDescuento], 
+    [VGPrestamo].[FechaPagoProgramado] AS [FechaPagoProgramado], 
+    [VGPrestamo].[FechaPago] AS [FechaPago], 
+    [VGPrestamo].[idGarantia] AS [idGarantia], 
+    [VGPrestamo].[NombreGarantia] AS [NombreGarantia], 
+    [VGPrestamo].[Descripcion] AS [Descripcion], 
+    [VGPrestamo].[PrecioGarantia] AS [PrecioGarantia], 
+    [VGPrestamo].[PrecioVenta] AS [PrecioVenta]
+    FROM [dbo].[VGPrestamo] AS [VGPrestamo]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VistaCajaTransaccion" EntityType="Self.VistaCajaTransaccion" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VistaCajaTransaccion].[idcaja] AS [idcaja], 
+    [VistaCajaTransaccion].[NombreEmpleado] AS [NombreEmpleado], 
+    [VistaCajaTransaccion].[idtransaccion] AS [idtransaccion], 
+    [VistaCajaTransaccion].[Monto] AS [Monto], 
+    [VistaCajaTransaccion].[FechaHora] AS [FechaHora], 
+    [VistaCajaTransaccion].[GlozaTransaccion] AS [GlozaTransaccion], 
+    [VistaCajaTransaccion].[tipoTRansaccion] AS [tipoTRansaccion]
+    FROM [dbo].[VistaCajaTransaccion] AS [VistaCajaTransaccion]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VMensajeria" EntityType="Self.VMensajeria" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VMensajeria].[id] AS [id], 
+    [VMensajeria].[Monto] AS [Monto], 
+    [VMensajeria].[FechaDesembolzo] AS [FechaDesembolzo], 
+    [VMensajeria].[InteresMensual] AS [InteresMensual], 
+    [VMensajeria].[PlazoMeses] AS [PlazoMeses], 
+    [VMensajeria].[EstadoPrestamo] AS [EstadoPrestamo], 
+    [VMensajeria].[idcliente] AS [idcliente], 
+    [VMensajeria].[NombreCompletoCliente] AS [NombreCompletoCliente], 
+    [VMensajeria].[idEmpleado] AS [idEmpleado], 
+    [VMensajeria].[idCalificacionCArtera] AS [idCalificacionCArtera], 
+    [VMensajeria].[NombreCalificacionCArtera] AS [NombreCalificacionCArtera], 
+    [VMensajeria].[NroCuotasPendiente] AS [NroCuotasPendiente], 
+    [VMensajeria].[TotalMontoInteresPendiente] AS [TotalMontoInteresPendiente], 
+    [VMensajeria].[NroCuotasPagadas] AS [NroCuotasPagadas], 
+    [VMensajeria].[TotalMontoInteresCancelado] AS [TotalMontoInteresCancelado], 
+    [VMensajeria].[GararantiaDescripcion] AS [GararantiaDescripcion], 
+    [VMensajeria].[FechaPagoCuota1erCuota] AS [FechaPagoCuota1erCuota], 
+    [VMensajeria].[FechaPagoCuotaUltimaCuota] AS [FechaPagoCuotaUltimaCuota], 
+    [VMensajeria].[TotalDeudaGeneral] AS [TotalDeudaGeneral], 
+    [VMensajeria].[Telefono] AS [Telefono], 
+    [VMensajeria].[MensajeCobranza] AS [MensajeCobranza]
+    FROM [dbo].[VMensajeria] AS [VMensajeria]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VPrestamoCuotaCalificacion" EntityType="Self.VPrestamoCuotaCalificacion" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VPrestamoCuotaCalificacion].[idprestamo] AS [idprestamo], 
+    [VPrestamoCuotaCalificacion].[monto] AS [monto], 
+    [VPrestamoCuotaCalificacion].[FechaDesembolzo] AS [FechaDesembolzo], 
+    [VPrestamoCuotaCalificacion].[NombreCliente] AS [NombreCliente], 
+    [VPrestamoCuotaCalificacion].[Telefono] AS [Telefono], 
+    [VPrestamoCuotaCalificacion].[NombreCalificacion] AS [NombreCalificacion], 
+    [VPrestamoCuotaCalificacion].[nroCuotaPendiente] AS [nroCuotaPendiente], 
+    [VPrestamoCuotaCalificacion].[TotalInteresPendiente] AS [TotalInteresPendiente], 
+    [VPrestamoCuotaCalificacion].[NroCuotaCancelada] AS [NroCuotaCancelada], 
+    [VPrestamoCuotaCalificacion].[TotalInteresCAncelado] AS [TotalInteresCAncelado]
+    FROM [dbo].[VPrestamoCuotaCalificacion] AS [VPrestamoCuotaCalificacion]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VPrestamoCuotaCalificacionEstadoCuotaCanceladas" EntityType="Self.VPrestamoCuotaCalificacionEstadoCuotaCanceladas" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VPrestamoCuotaCalificacionEstadoCuotaCanceladas].[idprestamo] AS [idprestamo], 
+    [VPrestamoCuotaCalificacionEstadoCuotaCanceladas].[Monto] AS [Monto], 
+    [VPrestamoCuotaCalificacionEstadoCuotaCanceladas].[FechaDesembolzo] AS [FechaDesembolzo], 
+    [VPrestamoCuotaCalificacionEstadoCuotaCanceladas].[InteresMensual] AS [InteresMensual], 
+    [VPrestamoCuotaCalificacionEstadoCuotaCanceladas].[PlazoMeses] AS [PlazoMeses], 
+    [VPrestamoCuotaCalificacionEstadoCuotaCanceladas].[EstadoPrestamo] AS [EstadoPrestamo], 
+    [VPrestamoCuotaCalificacionEstadoCuotaCanceladas].[idcliente] AS [idcliente], 
+    [VPrestamoCuotaCalificacionEstadoCuotaCanceladas].[NombreCliente] AS [NombreCliente], 
+    [VPrestamoCuotaCalificacionEstadoCuotaCanceladas].[Telefono] AS [Telefono], 
+    [VPrestamoCuotaCalificacionEstadoCuotaCanceladas].[totalInteres] AS [totalInteres], 
+    [VPrestamoCuotaCalificacionEstadoCuotaCanceladas].[NroCuota] AS [NroCuota], 
+    [VPrestamoCuotaCalificacionEstadoCuotaCanceladas].[EstadoCuota] AS [EstadoCuota], 
+    [VPrestamoCuotaCalificacionEstadoCuotaCanceladas].[idCalificacion] AS [idCalificacion], 
+    [VPrestamoCuotaCalificacionEstadoCuotaCanceladas].[NombreCalificacion] AS [NombreCalificacion]
+    FROM [dbo].[VPrestamoCuotaCalificacionEstadoCuotaCanceladas] AS [VPrestamoCuotaCalificacionEstadoCuotaCanceladas]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VPrestamoCuotaCalificacionEstadoCuotaPendiente" EntityType="Self.VPrestamoCuotaCalificacionEstadoCuotaPendiente" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VPrestamoCuotaCalificacionEstadoCuotaPendiente].[idprestamo] AS [idprestamo], 
+    [VPrestamoCuotaCalificacionEstadoCuotaPendiente].[Monto] AS [Monto], 
+    [VPrestamoCuotaCalificacionEstadoCuotaPendiente].[FechaDesembolzo] AS [FechaDesembolzo], 
+    [VPrestamoCuotaCalificacionEstadoCuotaPendiente].[InteresMensual] AS [InteresMensual], 
+    [VPrestamoCuotaCalificacionEstadoCuotaPendiente].[PlazoMeses] AS [PlazoMeses], 
+    [VPrestamoCuotaCalificacionEstadoCuotaPendiente].[EstadoPrestamo] AS [EstadoPrestamo], 
+    [VPrestamoCuotaCalificacionEstadoCuotaPendiente].[idcliente] AS [idcliente], 
+    [VPrestamoCuotaCalificacionEstadoCuotaPendiente].[NombreCliente] AS [NombreCliente], 
+    [VPrestamoCuotaCalificacionEstadoCuotaPendiente].[Telefono] AS [Telefono], 
+    [VPrestamoCuotaCalificacionEstadoCuotaPendiente].[totalInteres] AS [totalInteres], 
+    [VPrestamoCuotaCalificacionEstadoCuotaPendiente].[NroCuota] AS [NroCuota], 
+    [VPrestamoCuotaCalificacionEstadoCuotaPendiente].[EstadoCuota] AS [EstadoCuota], 
+    [VPrestamoCuotaCalificacionEstadoCuotaPendiente].[idCalificacion] AS [idCalificacion], 
+    [VPrestamoCuotaCalificacionEstadoCuotaPendiente].[NombreCalificacion] AS [NombreCalificacion]
+    FROM [dbo].[VPrestamoCuotaCalificacionEstadoCuotaPendiente] AS [VPrestamoCuotaCalificacionEstadoCuotaPendiente]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VPrestamoCuotas" EntityType="Self.VPrestamoCuotas" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VPrestamoCuotas].[idprestamo] AS [idprestamo], 
+    [VPrestamoCuotas].[monto] AS [monto], 
+    [VPrestamoCuotas].[FechaDesembolzo] AS [FechaDesembolzo], 
+    [VPrestamoCuotas].[interesMensual] AS [interesMensual], 
+    [VPrestamoCuotas].[PlazoMeses] AS [PlazoMeses], 
+    [VPrestamoCuotas].[EstadoPrestamo] AS [EstadoPrestamo], 
+    [VPrestamoCuotas].[NombreCalificacion] AS [NombreCalificacion], 
+    [VPrestamoCuotas].[idcliente] AS [idcliente], 
+    [VPrestamoCuotas].[NombreCliente] AS [NombreCliente], 
+    [VPrestamoCuotas].[Genero] AS [Genero], 
+    [VPrestamoCuotas].[FechaNacimiento] AS [FechaNacimiento], 
+    [VPrestamoCuotas].[DocumentoIdentidad] AS [DocumentoIdentidad], 
+    [VPrestamoCuotas].[Direccion] AS [Direccion], 
+    [VPrestamoCuotas].[Telefono] AS [Telefono], 
+    [VPrestamoCuotas].[Correo] AS [Correo], 
+    [VPrestamoCuotas].[Nit] AS [Nit], 
+    [VPrestamoCuotas].[NombreRubro] AS [NombreRubro], 
+    [VPrestamoCuotas].[NombreDepartamento] AS [NombreDepartamento], 
+    [VPrestamoCuotas].[NombreCiudad] AS [NombreCiudad], 
+    [VPrestamoCuotas].[idcuota] AS [idcuota], 
+    [VPrestamoCuotas].[MontoCapitalCuota] AS [MontoCapitalCuota], 
+    [VPrestamoCuotas].[MontoInteres] AS [MontoInteres], 
+    [VPrestamoCuotas].[MontoDescuento] AS [MontoDescuento], 
+    [VPrestamoCuotas].[FechaPagoProgramado] AS [FechaPagoProgramado], 
+    [VPrestamoCuotas].[FechaPago] AS [FechaPago], 
+    [VPrestamoCuotas].[DiasCuota] AS [DiasCuota], 
+    [VPrestamoCuotas].[swGeneroProximaCuota] AS [swGeneroProximaCuota]
+    FROM [dbo].[VPrestamoCuotas] AS [VPrestamoCuotas]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VPrestamoCuotasVigente" EntityType="Self.VPrestamoCuotasVigente" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VPrestamoCuotasVigente].[idprestamo] AS [idprestamo], 
+    [VPrestamoCuotasVigente].[Monto] AS [Monto], 
+    [VPrestamoCuotasVigente].[FechaDesembolzo] AS [FechaDesembolzo], 
+    [VPrestamoCuotasVigente].[InteresMensual] AS [InteresMensual], 
+    [VPrestamoCuotasVigente].[PlazoMeses] AS [PlazoMeses], 
+    [VPrestamoCuotasVigente].[EstadoPrestamo] AS [EstadoPrestamo], 
+    [VPrestamoCuotasVigente].[idcliente] AS [idcliente], 
+    [VPrestamoCuotasVigente].[NombreCliente] AS [NombreCliente], 
+    [VPrestamoCuotasVigente].[Genero] AS [Genero], 
+    [VPrestamoCuotasVigente].[FechaNacimiento] AS [FechaNacimiento], 
+    [VPrestamoCuotasVigente].[DocumentoIdentidad] AS [DocumentoIdentidad], 
+    [VPrestamoCuotasVigente].[Direccion] AS [Direccion], 
+    [VPrestamoCuotasVigente].[Telefono] AS [Telefono], 
+    [VPrestamoCuotasVigente].[Correo] AS [Correo], 
+    [VPrestamoCuotasVigente].[Nit] AS [Nit], 
+    [VPrestamoCuotasVigente].[NombreRubro] AS [NombreRubro], 
+    [VPrestamoCuotasVigente].[NombreDepartamento] AS [NombreDepartamento], 
+    [VPrestamoCuotasVigente].[NombreCiudad] AS [NombreCiudad], 
+    [VPrestamoCuotasVigente].[idcuota] AS [idcuota], 
+    [VPrestamoCuotasVigente].[MontoCapitalCuota] AS [MontoCapitalCuota], 
+    [VPrestamoCuotasVigente].[MontoInteres] AS [MontoInteres], 
+    [VPrestamoCuotasVigente].[MontoDescuento] AS [MontoDescuento], 
+    [VPrestamoCuotasVigente].[FechaPagoProgramado] AS [FechaPagoProgramado], 
+    [VPrestamoCuotasVigente].[FechaPago] AS [FechaPago], 
+    [VPrestamoCuotasVigente].[DiasCuota] AS [DiasCuota], 
+    [VPrestamoCuotasVigente].[swGeneroProximaCuota] AS [swGeneroProximaCuota]
+    FROM [dbo].[VPrestamoCuotasVigente] AS [VPrestamoCuotasVigente]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK__Caja__idEmpleado__2E1BDC42" Association="Self.FK__Caja__idEmpleado__2E1BDC42">
+            <End Role="Empleado" EntitySet="Empleado" />
+            <End Role="Caja" EntitySet="Caja" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Ciudad__idDepart__145C0A3F" Association="Self.FK__Ciudad__idDepart__145C0A3F">
+            <End Role="Departamento" EntitySet="Departamento" />
+            <End Role="Ciudad" EntitySet="Ciudad" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cliente__idCiudd__182C9B23" Association="Self.FK__Cliente__idCiudd__182C9B23">
+            <End Role="Ciudad" EntitySet="Ciudad" />
+            <End Role="Cliente" EntitySet="Cliente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cliente__idrubro__173876EA" Association="Self.FK__Cliente__idrubro__173876EA">
+            <End Role="Rubro" EntitySet="Rubro" />
+            <End Role="Cliente" EntitySet="Cliente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cuenta__idEmplea__3C34F16F" Association="Self.FK__Cuenta__idEmplea__3C34F16F">
+            <End Role="Empleado" EntitySet="Empleado" />
+            <End Role="Cuenta" EntitySet="Cuenta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CuentaBan__idEmp__2B0A656D" Association="Self.FK__CuentaBan__idEmp__2B0A656D">
+            <End Role="Empleado" EntitySet="Empleado" />
+            <End Role="CuentaBancaria" EntitySet="CuentaBancaria" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CuentaBan__idEnt__2BFE89A6" Association="Self.FK__CuentaBan__idEnt__2BFE89A6">
+            <End Role="EntidadFinanciera" EntitySet="EntidadFinanciera" />
+            <End Role="CuentaBancaria" EntitySet="CuentaBancaria" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cuota__idPrestam__45F365D3" Association="Self.FK__Cuota__idPrestam__45F365D3">
+            <End Role="Prestamo" EntitySet="Prestamo" />
+            <End Role="Cuota" EntitySet="Cuota" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Empleado__idCarg__2A4B4B5E" Association="Self.FK__Empleado__idCarg__2A4B4B5E">
+            <End Role="Cargo" EntitySet="Cargo" />
+            <End Role="Empleado" EntitySet="Empleado" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Empleado__idSucu__2B3F6F97" Association="Self.FK__Empleado__idSucu__2B3F6F97">
+            <End Role="Sucursal" EntitySet="Sucursal" />
+            <End Role="Empleado" EntitySet="Empleado" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Garantia__idPres__4BAC3F29" Association="Self.FK__Garantia__idPres__4BAC3F29">
+            <End Role="Prestamo" EntitySet="Prestamo" />
+            <End Role="Garantia" EntitySet="Garantia" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HTransacc__idCaj__33D4B598" Association="Self.FK__HTransacc__idCaj__33D4B598">
+            <End Role="Caja" EntitySet="Caja" />
+            <End Role="HTransaccion" EntitySet="HTransaccion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HTransacc__idEmp__34C8D9D1" Association="Self.FK__HTransacc__idEmp__34C8D9D1">
+            <End Role="Empleado" EntitySet="Empleado" />
+            <End Role="HTransaccion" EntitySet="HTransaccion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Natural__id__1B0907CE" Association="Self.FK__Natural__id__1B0907CE">
+            <End Role="Cliente" EntitySet="Cliente" />
+            <End Role="Natural" EntitySet="Natural" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Pago__idCuota__48CFD27E" Association="Self.FK__Pago__idCuota__48CFD27E">
+            <End Role="Cuota" EntitySet="Cuota" />
+            <End Role="Pago" EntitySet="Pago" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Prestamo__idCali__4222D4EF" Association="Self.FK__Prestamo__idCali__4222D4EF">
+            <End Role="CalificacionCartera" EntitySet="CalificacionCartera" />
+            <End Role="Prestamo" EntitySet="Prestamo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Prestamo__idclie__403A8C7D" Association="Self.FK__Prestamo__idclie__403A8C7D">
+            <End Role="Cliente" EntitySet="Cliente" />
+            <End Role="Prestamo" EntitySet="Prestamo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Prestamo__idEmpl__412EB0B6" Association="Self.FK__Prestamo__idEmpl__412EB0B6">
+            <End Role="Empleado" EntitySet="Empleado" />
+            <End Role="Prestamo" EntitySet="Prestamo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Prestamo__idtipo__339FAB6E" Association="Self.FK__Prestamo__idtipo__339FAB6E">
+            <End Role="TipoDesembolso" EntitySet="TipoDesembolso" />
+            <End Role="Prestamo" EntitySet="Prestamo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Transacci__idCaj__30F848ED" Association="Self.FK__Transacci__idCaj__30F848ED">
+            <End Role="Caja" EntitySet="Caja" />
+            <End Role="Transaccion" EntitySet="Transaccion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Transacci__idcue__2EDAF651" Association="Self.FK__Transacci__idcue__2EDAF651">
+            <End Role="CuentaBancaria" EntitySet="CuentaBancaria" />
+            <End Role="TransaccionCuentaBancaria" EntitySet="TransaccionCuentaBancaria" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Transacci__idCue__3F115E1A" Association="Self.FK__Transacci__idCue__3F115E1A">
+            <End Role="Cuenta" EntitySet="Cuenta" />
+            <End Role="TransaccionCuenta" EntitySet="TransaccionCuenta" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dbFinanciaCorpModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="AperturaSistema">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" />
+          <Property Name="FechaApertura" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="Caja">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" />
+          <Property Name="FechaHoraApertura" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FechaHoraCierre" Type="DateTime" Precision="3" />
+          <Property Name="DescripcionCaja" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EstadoCaja" Type="Int32" />
+          <Property Name="idEmpleado" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="Empleado" Relationship="Self.FK__Caja__idEmpleado__2E1BDC42" FromRole="Caja" ToRole="Empleado" />
+          <NavigationProperty Name="HTransaccion" Relationship="Self.FK__HTransacc__idCaj__33D4B598" FromRole="Caja" ToRole="HTransaccion" />
+          <NavigationProperty Name="Transaccion" Relationship="Self.FK__Transacci__idCaj__30F848ED" FromRole="Caja" ToRole="Transaccion" />
+        </EntityType>
+        <EntityType Name="CalificacionCartera">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" />
+          <Property Name="NombreCalificacion" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DiasInicio" Type="Int32" Nullable="false" />
+          <Property Name="DiasFinal" Type="Int32" Nullable="false" />
+          <Property Name="DescripcionCalificacion" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Prestamo" Relationship="Self.FK__Prestamo__idCali__4222D4EF" FromRole="CalificacionCartera" ToRole="Prestamo" />
+        </EntityType>
+        <EntityType Name="Cargo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" />
+          <Property Name="NombreCargo" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Empleado" Relationship="Self.FK__Empleado__idCarg__2A4B4B5E" FromRole="Cargo" ToRole="Empleado" />
+        </EntityType>
+        <EntityType Name="Ciudad">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" />
+          <Property Name="NombreCiudad" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="idDepartamento" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="Departamento" Relationship="Self.FK__Ciudad__idDepart__145C0A3F" FromRole="Ciudad" ToRole="Departamento" />
+          <NavigationProperty Name="Cliente" Relationship="Self.FK__Cliente__idCiudd__182C9B23" FromRole="Ciudad" ToRole="Cliente" />
+        </EntityType>
+        <EntityType Name="Cliente">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" />
+          <Property Name="Direccion" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Telefono" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Telefono2" Type="String" MaxLength="90" FixedLength="false" Unicode="false" />
+          <Property Name="Correo" Type="String" MaxLength="90" FixedLength="false" Unicode="false" />
+          <Property Name="Nit" Type="Int64" />
+          <Property Name="idrubro" Type="Int64" Nullable="false" />
+          <Property Name="idCiuddad" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="Ciudad" Relationship="Self.FK__Cliente__idCiudd__182C9B23" FromRole="Cliente" ToRole="Ciudad" />
+          <NavigationProperty Name="Rubro" Relationship="Self.FK__Cliente__idrubro__173876EA" FromRole="Cliente" ToRole="Rubro" />
+          <NavigationProperty Name="Natural" Relationship="Self.FK__Natural__id__1B0907CE" FromRole="Cliente" ToRole="Natural" />
+          <NavigationProperty Name="Prestamo" Relationship="Self.FK__Prestamo__idclie__403A8C7D" FromRole="Cliente" ToRole="Prestamo" />
+        </EntityType>
+        <EntityType Name="Contrato">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" />
+          <Property Name="Parrafo1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Parrafo2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Parrafo3" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Parrafo4" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Parrafo5" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Parrafo6" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Parrafo7" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Parrafo8" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Parrafo9" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Parrafo10" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Cuenta">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" />
+          <Property Name="NombreCuenta" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FechaApertura" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FechaCierre" Type="DateTime" Precision="3" />
+          <Property Name="EstadoCuenta" Type="Int32" Nullable="false" />
+          <Property Name="idEmpleado" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="Empleado" Relationship="Self.FK__Cuenta__idEmplea__3C34F16F" FromRole="Cuenta" ToRole="Empleado" />
+          <NavigationProperty Name="TransaccionCuenta" Relationship="Self.FK__Transacci__idCue__3F115E1A" FromRole="Cuenta" ToRole="TransaccionCuenta" />
+        </EntityType>
+        <EntityType Name="CuentaBancaria">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" />
+          <Property Name="NroCuenta" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Moneda" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FechaApertura" Type="DateTime" Precision="3" />
+          <Property Name="NombrecompletoTitular1" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NombreCompletoTitular2" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="idEmpleado" Type="Int64" Nullable="false" />
+          <Property Name="idEntidadFinanciera" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="Empleado" Relationship="Self.FK__CuentaBan__idEmp__2B0A656D" FromRole="CuentaBancaria" ToRole="Empleado" />
+          <NavigationProperty Name="EntidadFinanciera" Relationship="Self.FK__CuentaBan__idEnt__2BFE89A6" FromRole="CuentaBancaria" ToRole="EntidadFinanciera" />
+          <NavigationProperty Name="TransaccionCuentaBancaria" Relationship="Self.FK__Transacci__idcue__2EDAF651" FromRole="CuentaBancaria" ToRole="TransaccionCuentaBancaria" />
+        </EntityType>
+        <EntityType Name="Cuota">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" />
+          <Property Name="MontoCapital" Type="Double" Nullable="false" />
+          <Property Name="MontoInteres" Type="Double" Nullable="false" />
+          <Property Name="MontoDescuento" Type="Double" Nullable="false" />
+          <Property Name="FechaPagoProgramado" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FechaPago" Type="DateTime" Precision="3" />
+          <Property Name="DiasCuota" Type="Int32" />
+          <Property Name="SwGeneroProximaCuota" Type="Int32" />
+          <Property Name="idPrestamos" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="Prestamo" Relationship="Self.FK__Cuota__idPrestam__45F365D3" FromRole="Cuota" ToRole="Prestamo" />
+          <NavigationProperty Name="Pago" Relationship="Self.FK__Pago__idCuota__48CFD27E" FromRole="Cuota" ToRole="Pago" />
+        </EntityType>
+        <EntityType Name="Departamento">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" />
+          <Property Name="NombreDepartamento" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Ciudad" Relationship="Self.FK__Ciudad__idDepart__145C0A3F" FromRole="Departamento" ToRole="Ciudad" />
+        </EntityType>
+        <EntityType Name="Empleado">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" />
+          <Property Name="NombreEmpleado" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DocumentoIdentidad" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Usuario" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Contrasena" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FechaNacimiento" Type="DateTime" Precision="3" />
+          <Property Name="idCargo" Type="Int64" Nullable="false" />
+          <Property Name="idSucursal" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="Caja" Relationship="Self.FK__Caja__idEmpleado__2E1BDC42" FromRole="Empleado" ToRole="Caja" />
+          <NavigationProperty Name="Cargo" Relationship="Self.FK__Empleado__idCarg__2A4B4B5E" FromRole="Empleado" ToRole="Cargo" />
+          <NavigationProperty Name="Cuenta" Relationship="Self.FK__Cuenta__idEmplea__3C34F16F" FromRole="Empleado" ToRole="Cuenta" />
+          <NavigationProperty Name="CuentaBancaria" Relationship="Self.FK__CuentaBan__idEmp__2B0A656D" FromRole="Empleado" ToRole="CuentaBancaria" />
+          <NavigationProperty Name="Sucursal" Relationship="Self.FK__Empleado__idSucu__2B3F6F97" FromRole="Empleado" ToRole="Sucursal" />
+          <NavigationProperty Name="HTransaccion" Relationship="Self.FK__HTransacc__idEmp__34C8D9D1" FromRole="Empleado" ToRole="HTransaccion" />
+          <NavigationProperty Name="Prestamo" Relationship="Self.FK__Prestamo__idEmpl__412EB0B6" FromRole="Empleado" ToRole="Prestamo" />
+        </EntityType>
+        <EntityType Name="EntidadFinanciera">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" />
+          <Property Name="NombreEntidad" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Direccion" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Telefono" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="CuentaBancaria" Relationship="Self.FK__CuentaBan__idEnt__2BFE89A6" FromRole="EntidadFinanciera" ToRole="CuentaBancaria" />
+        </EntityType>
+        <EntityType Name="Garantia">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" />
+          <Property Name="NombreGarantia" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PrecioGarantia" Type="Double" />
+          <Property Name="PrecioVenta" Type="Double" />
+          <Property Name="idPrestamo" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="Prestamo" Relationship="Self.FK__Garantia__idPres__4BAC3F29" FromRole="Garantia" ToRole="Prestamo" />
+        </EntityType>
+        <EntityType Name="HTransaccion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" />
+          <Property Name="Monto" Type="Double" Nullable="false" />
+          <Property Name="FechaHora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="GlozaTransaccion" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="idCaja" Type="Int64" Nullable="false" />
+          <Property Name="idEmpleado" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="Caja" Relationship="Self.FK__HTransacc__idCaj__33D4B598" FromRole="HTransaccion" ToRole="Caja" />
+          <NavigationProperty Name="Empleado" Relationship="Self.FK__HTransacc__idEmp__34C8D9D1" FromRole="HTransaccion" ToRole="Empleado" />
+        </EntityType>
+        <EntityType Name="Natural">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" />
+          <Property Name="NombreCliente" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ApellidoPaterno" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ApellidoMaterno" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Genero" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FechaNacimiento" Type="DateTime" Precision="3" />
+          <Property Name="DocumentoIdentidad" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Cliente" Relationship="Self.FK__Natural__id__1B0907CE" FromRole="Natural" ToRole="Cliente" />
+        </EntityType>
+        <EntityType Name="Pago">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" />
+          <Property Name="Monto" Type="Double" Nullable="false" />
+          <Property Name="FechaHoraPago" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Gloza" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="idCuota" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="Cuota" Relationship="Self.FK__Pago__idCuota__48CFD27E" FromRole="Pago" ToRole="Cuota" />
+        </EntityType>
+        <EntityType Name="Prestamo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" />
+          <Property Name="Monto" Type="Double" Nullable="false" />
+          <Property Name="FechaDesembolzo" Type="DateTime" Precision="3" />
+          <Property Name="InteresMensual" Type="Double" Nullable="false" />
+          <Property Name="PlazoMeses" Type="Double" Nullable="false" />
+          <Property Name="EstadoPrestamo" Type="Int32" />
+          <Property Name="idcliente" Type="Int64" Nullable="false" />
+          <Property Name="idEmpleado" Type="Int64" Nullable="false" />
+          <Property Name="idCalificacionCArtera" Type="Int64" Nullable="false" />
+          <Property Name="idtipoDesembolso" Type="Int64" />
+          <NavigationProperty Name="CalificacionCartera" Relationship="Self.FK__Prestamo__idCali__4222D4EF" FromRole="Prestamo" ToRole="CalificacionCartera" />
+          <NavigationProperty Name="Cliente" Relationship="Self.FK__Prestamo__idclie__403A8C7D" FromRole="Prestamo" ToRole="Cliente" />
+          <NavigationProperty Name="Cuota" Relationship="Self.FK__Cuota__idPrestam__45F365D3" FromRole="Prestamo" ToRole="Cuota" />
+          <NavigationProperty Name="Empleado" Relationship="Self.FK__Prestamo__idEmpl__412EB0B6" FromRole="Prestamo" ToRole="Empleado" />
+          <NavigationProperty Name="Garantia" Relationship="Self.FK__Garantia__idPres__4BAC3F29" FromRole="Prestamo" ToRole="Garantia" />
+          <NavigationProperty Name="TipoDesembolso" Relationship="Self.FK__Prestamo__idtipo__339FAB6E" FromRole="Prestamo" ToRole="TipoDesembolso" />
+        </EntityType>
+        <EntityType Name="Rubro">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" />
+          <Property Name="NombreRubro" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Cliente" Relationship="Self.FK__Cliente__idrubro__173876EA" FromRole="Rubro" ToRole="Cliente" />
+        </EntityType>
+        <EntityType Name="Sucursal">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" />
+          <Property Name="NombreSucursal" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Direccion" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Telefono" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LogoEmpresa" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="PaginaWeb" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NroNit" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Empleado" Relationship="Self.FK__Empleado__idSucu__2B3F6F97" FromRole="Sucursal" ToRole="Empleado" />
+        </EntityType>
+        <EntityType Name="TbResumenPrestamo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" />
+          <Property Name="Monto" Type="Double" Nullable="false" />
+          <Property Name="FechaDesembolzo" Type="DateTime" Precision="3" />
+          <Property Name="InteresMensual" Type="Double" Nullable="false" />
+          <Property Name="PlazoMeses" Type="Double" Nullable="false" />
+          <Property Name="EstadoPrestamo" Type="Int32" />
+          <Property Name="idcliente" Type="Int64" Nullable="false" />
+          <Property Name="NombreCompletoCliente" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="idEmpleado" Type="Int64" Nullable="false" />
+          <Property Name="idCalificacionCArtera" Type="Int64" Nullable="false" />
+          <Property Name="NombreCalificacionCArtera" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="NroCuotasPendiente" Type="Int32" />
+          <Property Name="TotalMontoInteresPendiente" Type="Double" />
+          <Property Name="NroCuotasPagadas" Type="Int32" />
+          <Property Name="TotalMontoInteresCancelado" Type="Double" />
+          <Property Name="GararantiaDescripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FechaPagoCuota1erCuota" Type="DateTime" Precision="3" />
+          <Property Name="FechaPagoCuotaUltimaCuota" Type="DateTime" Precision="3" />
+          <Property Name="TotalDeudaGeneral" Type="Double" />
+        </EntityType>
+        <EntityType Name="TipoDesembolso">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" />
+          <Property Name="NombreTipoDesembolso" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Prestamo" Relationship="Self.FK__Prestamo__idtipo__339FAB6E" FromRole="TipoDesembolso" ToRole="Prestamo" />
+        </EntityType>
+        <EntityType Name="Transaccion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" />
+          <Property Name="Monto" Type="Double" Nullable="false" />
+          <Property Name="FechaHora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="GlozaTransaccion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="idCaja" Type="Int64" Nullable="false" />
+          <Property Name="TipoTransaccion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Caja" Relationship="Self.FK__Transacci__idCaj__30F848ED" FromRole="Transaccion" ToRole="Caja" />
+        </EntityType>
+        <EntityType Name="TransaccionCuenta">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" />
+          <Property Name="Monto" Type="Double" />
+          <Property Name="FechaHora" Type="DateTime" Precision="3" />
+          <Property Name="Gloza" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TipoTransaccion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="idCuenta" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="Cuenta" Relationship="Self.FK__Transacci__idCue__3F115E1A" FromRole="TransaccionCuenta" ToRole="Cuenta" />
+        </EntityType>
+        <EntityType Name="TransaccionCuentaBancaria">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" />
+          <Property Name="FechaTranscaccion" Type="DateTime" Precision="3" />
+          <Property Name="Monto" Type="Double" Nullable="false" />
+          <Property Name="GlosaTransaccion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ResponsableTransaccion" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TipoTransaccion" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="idcuentaBancaria" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="CuentaBancaria" Relationship="Self.FK__Transacci__idcue__2EDAF651" FromRole="TransaccionCuentaBancaria" ToRole="CuentaBancaria" />
+        </EntityType>
+        <EntityType Name="VclienteGeneral">
+          <Key>
+            <PropertyRef Name="idcliente" />
+            <PropertyRef Name="NombreCliente" />
+            <PropertyRef Name="Genero" />
+            <PropertyRef Name="DocumentoIdentidad" />
+            <PropertyRef Name="Direccion" />
+            <PropertyRef Name="NombreRubro" />
+            <PropertyRef Name="NombreDepartamento" />
+            <PropertyRef Name="NombreCiudad" />
+          </Key>
+          <Property Name="idcliente" Type="Int64" Nullable="false" />
+          <Property Name="NombreCliente" Type="String" MaxLength="272" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Genero" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FechaNacimiento" Type="DateTime" Precision="0" />
+          <Property Name="DocumentoIdentidad" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Direccion" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Telefono" Type="String" MaxLength="181" FixedLength="false" Unicode="false" />
+          <Property Name="Correo" Type="String" MaxLength="90" FixedLength="false" Unicode="false" />
+          <Property Name="Nit" Type="Int64" />
+          <Property Name="NombreRubro" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NombreDepartamento" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NombreCiudad" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VCuentaBancaria">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="NombreEntidad" />
+            <PropertyRef Name="NroCuenta" />
+            <PropertyRef Name="NombrecompletoTitular1" />
+            <PropertyRef Name="NombreCompletoTitular2" />
+            <PropertyRef Name="Moneda" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" />
+          <Property Name="NombreEntidad" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NroCuenta" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NombrecompletoTitular1" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NombreCompletoTitular2" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Moneda" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VCuentaBancariaTransaccion">
+          <Key>
+            <PropertyRef Name="idtransaccionBancaria" />
+            <PropertyRef Name="NombreEntidad" />
+            <PropertyRef Name="NroCuenta" />
+            <PropertyRef Name="NombrecompletoTitular1" />
+            <PropertyRef Name="NombreCompletoTitular2" />
+            <PropertyRef Name="Moneda" />
+            <PropertyRef Name="Monto" />
+            <PropertyRef Name="ResponsableTransaccion" />
+            <PropertyRef Name="TipoTransaccion" />
+            <PropertyRef Name="GlosaTransaccion" />
+          </Key>
+          <Property Name="idtransaccionBancaria" Type="Int64" Nullable="false" />
+          <Property Name="NombreEntidad" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NroCuenta" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NombrecompletoTitular1" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NombreCompletoTitular2" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Moneda" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FechaTranscaccion" Type="DateTime" Precision="3" />
+          <Property Name="Monto" Type="Double" Nullable="false" />
+          <Property Name="ResponsableTransaccion" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TipoTransaccion" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GlosaTransaccion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VGPrestamo">
+          <Key>
+            <PropertyRef Name="idprestamo" />
+            <PropertyRef Name="Monto" />
+            <PropertyRef Name="InteresMensual" />
+            <PropertyRef Name="PlazoMeses" />
+            <PropertyRef Name="idcliente" />
+            <PropertyRef Name="NombreCliente" />
+            <PropertyRef Name="Genero" />
+            <PropertyRef Name="DocumentoIdentidad" />
+            <PropertyRef Name="Direccion" />
+            <PropertyRef Name="NombreRubro" />
+            <PropertyRef Name="NombreDepartamento" />
+            <PropertyRef Name="NombreCiudad" />
+            <PropertyRef Name="idcuota" />
+            <PropertyRef Name="MontoCapitalCuota" />
+            <PropertyRef Name="MontoInteres" />
+            <PropertyRef Name="MontoDescuento" />
+          </Key>
+          <Property Name="idprestamo" Type="Int64" Nullable="false" />
+          <Property Name="Monto" Type="Double" Nullable="false" />
+          <Property Name="FechaDesembolzo" Type="DateTime" Precision="0" />
+          <Property Name="InteresMensual" Type="Double" Nullable="false" />
+          <Property Name="PlazoMeses" Type="Double" Nullable="false" />
+          <Property Name="EstadoPrestamo" Type="Int32" />
+          <Property Name="idcliente" Type="Int64" Nullable="false" />
+          <Property Name="NombreCliente" Type="String" MaxLength="272" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Genero" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FechaNacimiento" Type="DateTime" Precision="0" />
+          <Property Name="DocumentoIdentidad" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Direccion" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Telefono" Type="String" MaxLength="181" FixedLength="false" Unicode="false" />
+          <Property Name="Correo" Type="String" MaxLength="90" FixedLength="false" Unicode="false" />
+          <Property Name="Nit" Type="Int64" />
+          <Property Name="NombreRubro" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NombreDepartamento" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NombreCiudad" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="idcuota" Type="Int64" Nullable="false" />
+          <Property Name="MontoCapitalCuota" Type="Double" Nullable="false" />
+          <Property Name="MontoInteres" Type="Double" Nullable="false" />
+          <Property Name="MontoDescuento" Type="Double" Nullable="false" />
+          <Property Name="FechaPagoProgramado" Type="DateTime" Precision="0" />
+          <Property Name="FechaPago" Type="DateTime" Precision="3" />
+          <Property Name="idGarantia" Type="Int64" />
+          <Property Name="NombreGarantia" Type="String" MaxLength="90" FixedLength="false" Unicode="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="PrecioGarantia" Type="Double" />
+          <Property Name="PrecioVenta" Type="Double" />
+        </EntityType>
+        <EntityType Name="VistaCajaTransaccion">
+          <Key>
+            <PropertyRef Name="idcaja" />
+            <PropertyRef Name="NombreEmpleado" />
+            <PropertyRef Name="idtransaccion" />
+            <PropertyRef Name="Monto" />
+            <PropertyRef Name="FechaHora" />
+            <PropertyRef Name="GlozaTransaccion" />
+          </Key>
+          <Property Name="idcaja" Type="Int64" Nullable="false" />
+          <Property Name="NombreEmpleado" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="idtransaccion" Type="Int64" Nullable="false" />
+          <Property Name="Monto" Type="Double" Nullable="false" />
+          <Property Name="FechaHora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="GlozaTransaccion" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tipoTRansaccion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="VMensajeria">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="Monto" />
+            <PropertyRef Name="InteresMensual" />
+            <PropertyRef Name="PlazoMeses" />
+            <PropertyRef Name="idcliente" />
+            <PropertyRef Name="idEmpleado" />
+            <PropertyRef Name="idCalificacionCArtera" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" />
+          <Property Name="Monto" Type="Double" Nullable="false" />
+          <Property Name="FechaDesembolzo" Type="DateTime" Precision="3" />
+          <Property Name="InteresMensual" Type="Double" Nullable="false" />
+          <Property Name="PlazoMeses" Type="Double" Nullable="false" />
+          <Property Name="EstadoPrestamo" Type="Int32" />
+          <Property Name="idcliente" Type="Int64" Nullable="false" />
+          <Property Name="NombreCompletoCliente" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="idEmpleado" Type="Int64" Nullable="false" />
+          <Property Name="idCalificacionCArtera" Type="Int64" Nullable="false" />
+          <Property Name="NombreCalificacionCArtera" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="NroCuotasPendiente" Type="Int32" />
+          <Property Name="TotalMontoInteresPendiente" Type="Double" />
+          <Property Name="NroCuotasPagadas" Type="Int32" />
+          <Property Name="TotalMontoInteresCancelado" Type="Double" />
+          <Property Name="GararantiaDescripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FechaPagoCuota1erCuota" Type="DateTime" Precision="3" />
+          <Property Name="FechaPagoCuotaUltimaCuota" Type="DateTime" Precision="3" />
+          <Property Name="TotalDeudaGeneral" Type="Double" />
+          <Property Name="Telefono" Type="String" MaxLength="181" FixedLength="false" Unicode="false" />
+          <Property Name="MensajeCobranza" Type="String" MaxLength="365" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="VPrestamoCuotaCalificacion">
+          <Key>
+            <PropertyRef Name="idprestamo" />
+            <PropertyRef Name="monto" />
+            <PropertyRef Name="NombreCliente" />
+            <PropertyRef Name="NombreCalificacion" />
+            <PropertyRef Name="nroCuotaPendiente" />
+            <PropertyRef Name="TotalInteresPendiente" />
+            <PropertyRef Name="NroCuotaCancelada" />
+            <PropertyRef Name="TotalInteresCAncelado" />
+          </Key>
+          <Property Name="idprestamo" Type="Int64" Nullable="false" />
+          <Property Name="monto" Type="Double" Nullable="false" />
+          <Property Name="FechaDesembolzo" Type="DateTime" Precision="0" />
+          <Property Name="NombreCliente" Type="String" MaxLength="272" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Telefono" Type="String" MaxLength="181" FixedLength="false" Unicode="false" />
+          <Property Name="NombreCalificacion" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nroCuotaPendiente" Type="Int32" Nullable="false" />
+          <Property Name="TotalInteresPendiente" Type="Double" Nullable="false" />
+          <Property Name="NroCuotaCancelada" Type="Int32" Nullable="false" />
+          <Property Name="TotalInteresCAncelado" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VPrestamoCuotaCalificacionEstadoCuotaCanceladas">
+          <Key>
+            <PropertyRef Name="idprestamo" />
+            <PropertyRef Name="Monto" />
+            <PropertyRef Name="InteresMensual" />
+            <PropertyRef Name="PlazoMeses" />
+            <PropertyRef Name="idcliente" />
+            <PropertyRef Name="NombreCliente" />
+            <PropertyRef Name="EstadoCuota" />
+            <PropertyRef Name="idCalificacion" />
+            <PropertyRef Name="NombreCalificacion" />
+          </Key>
+          <Property Name="idprestamo" Type="Int64" Nullable="false" />
+          <Property Name="Monto" Type="Double" Nullable="false" />
+          <Property Name="FechaDesembolzo" Type="DateTime" Precision="0" />
+          <Property Name="InteresMensual" Type="Double" Nullable="false" />
+          <Property Name="PlazoMeses" Type="Double" Nullable="false" />
+          <Property Name="EstadoPrestamo" Type="Int32" />
+          <Property Name="idcliente" Type="Int64" Nullable="false" />
+          <Property Name="NombreCliente" Type="String" MaxLength="272" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Telefono" Type="String" MaxLength="181" FixedLength="false" Unicode="false" />
+          <Property Name="totalInteres" Type="Double" />
+          <Property Name="NroCuota" Type="Int32" />
+          <Property Name="EstadoCuota" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="idCalificacion" Type="Int64" Nullable="false" />
+          <Property Name="NombreCalificacion" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VPrestamoCuotaCalificacionEstadoCuotaPendiente">
+          <Key>
+            <PropertyRef Name="idprestamo" />
+            <PropertyRef Name="Monto" />
+            <PropertyRef Name="InteresMensual" />
+            <PropertyRef Name="PlazoMeses" />
+            <PropertyRef Name="idcliente" />
+            <PropertyRef Name="NombreCliente" />
+            <PropertyRef Name="EstadoCuota" />
+            <PropertyRef Name="idCalificacion" />
+            <PropertyRef Name="NombreCalificacion" />
+          </Key>
+          <Property Name="idprestamo" Type="Int64" Nullable="false" />
+          <Property Name="Monto" Type="Double" Nullable="false" />
+          <Property Name="FechaDesembolzo" Type="DateTime" Precision="0" />
+          <Property Name="InteresMensual" Type="Double" Nullable="false" />
+          <Property Name="PlazoMeses" Type="Double" Nullable="false" />
+          <Property Name="EstadoPrestamo" Type="Int32" />
+          <Property Name="idcliente" Type="Int64" Nullable="false" />
+          <Property Name="NombreCliente" Type="String" MaxLength="272" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Telefono" Type="String" MaxLength="181" FixedLength="false" Unicode="false" />
+          <Property Name="totalInteres" Type="Double" />
+          <Property Name="NroCuota" Type="Int32" />
+          <Property Name="EstadoCuota" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="idCalificacion" Type="Int64" Nullable="false" />
+          <Property Name="NombreCalificacion" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VPrestamoCuotas">
+          <Key>
+            <PropertyRef Name="PlazoMeses" />
+            <PropertyRef Name="NombreCalificacion" />
+            <PropertyRef Name="idcliente" />
+            <PropertyRef Name="NombreCliente" />
+            <PropertyRef Name="Genero" />
+            <PropertyRef Name="DocumentoIdentidad" />
+            <PropertyRef Name="Direccion" />
+            <PropertyRef Name="NombreRubro" />
+            <PropertyRef Name="NombreDepartamento" />
+            <PropertyRef Name="NombreCiudad" />
+            <PropertyRef Name="idcuota" />
+            <PropertyRef Name="MontoCapitalCuota" />
+            <PropertyRef Name="MontoInteres" />
+            <PropertyRef Name="MontoDescuento" />
+            <PropertyRef Name="FechaPagoProgramado" />
+          </Key>
+          <Property Name="idprestamo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="monto" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="FechaDesembolzo" Type="DateTime" Precision="0" />
+          <Property Name="interesMensual" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="PlazoMeses" Type="Double" Nullable="false" />
+          <Property Name="EstadoPrestamo" Type="Int32" />
+          <Property Name="NombreCalificacion" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="idcliente" Type="Int64" Nullable="false" />
+          <Property Name="NombreCliente" Type="String" MaxLength="272" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Genero" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FechaNacimiento" Type="DateTime" Precision="0" />
+          <Property Name="DocumentoIdentidad" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Direccion" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Telefono" Type="String" MaxLength="181" FixedLength="false" Unicode="false" />
+          <Property Name="Correo" Type="String" MaxLength="90" FixedLength="false" Unicode="false" />
+          <Property Name="Nit" Type="Int64" />
+          <Property Name="NombreRubro" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NombreDepartamento" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NombreCiudad" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="idcuota" Type="Int64" Nullable="false" />
+          <Property Name="MontoCapitalCuota" Type="Double" Nullable="false" />
+          <Property Name="MontoInteres" Type="Double" Nullable="false" />
+          <Property Name="MontoDescuento" Type="Double" Nullable="false" />
+          <Property Name="FechaPagoProgramado" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FechaPago" Type="DateTime" Precision="3" />
+          <Property Name="DiasCuota" Type="Int32" />
+          <Property Name="swGeneroProximaCuota" Type="Int32" />
+        </EntityType>
+        <EntityType Name="VPrestamoCuotasVigente">
+          <Key>
+            <PropertyRef Name="idprestamo" />
+            <PropertyRef Name="Monto" />
+            <PropertyRef Name="InteresMensual" />
+            <PropertyRef Name="PlazoMeses" />
+            <PropertyRef Name="idcliente" />
+            <PropertyRef Name="NombreCliente" />
+            <PropertyRef Name="Genero" />
+            <PropertyRef Name="DocumentoIdentidad" />
+            <PropertyRef Name="Direccion" />
+            <PropertyRef Name="NombreRubro" />
+            <PropertyRef Name="NombreDepartamento" />
+            <PropertyRef Name="NombreCiudad" />
+            <PropertyRef Name="idcuota" />
+            <PropertyRef Name="MontoCapitalCuota" />
+            <PropertyRef Name="MontoInteres" />
+            <PropertyRef Name="MontoDescuento" />
+            <PropertyRef Name="FechaPagoProgramado" />
+          </Key>
+          <Property Name="idprestamo" Type="Int64" Nullable="false" />
+          <Property Name="Monto" Type="Double" Nullable="false" />
+          <Property Name="FechaDesembolzo" Type="DateTime" Precision="0" />
+          <Property Name="InteresMensual" Type="Double" Nullable="false" />
+          <Property Name="PlazoMeses" Type="Double" Nullable="false" />
+          <Property Name="EstadoPrestamo" Type="Int32" />
+          <Property Name="idcliente" Type="Int64" Nullable="false" />
+          <Property Name="NombreCliente" Type="String" MaxLength="272" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Genero" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FechaNacimiento" Type="DateTime" Precision="0" />
+          <Property Name="DocumentoIdentidad" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Direccion" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Telefono" Type="String" MaxLength="181" FixedLength="false" Unicode="false" />
+          <Property Name="Correo" Type="String" MaxLength="90" FixedLength="false" Unicode="false" />
+          <Property Name="Nit" Type="Int64" />
+          <Property Name="NombreRubro" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NombreDepartamento" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NombreCiudad" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="idcuota" Type="Int64" Nullable="false" />
+          <Property Name="MontoCapitalCuota" Type="Double" Nullable="false" />
+          <Property Name="MontoInteres" Type="Double" Nullable="false" />
+          <Property Name="MontoDescuento" Type="Double" Nullable="false" />
+          <Property Name="FechaPagoProgramado" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FechaPago" Type="DateTime" Precision="3" />
+          <Property Name="DiasCuota" Type="Int32" />
+          <Property Name="swGeneroProximaCuota" Type="Int32" />
+        </EntityType>
+        <Association Name="FK__Caja__idEmpleado__2E1BDC42">
+          <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
+          <End Role="Caja" Type="Self.Caja" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empleado">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Caja">
+              <PropertyRef Name="idEmpleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HTransacc__idCaj__33D4B598">
+          <End Role="Caja" Type="Self.Caja" Multiplicity="1" />
+          <End Role="HTransaccion" Type="Self.HTransaccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Caja">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HTransaccion">
+              <PropertyRef Name="idCaja" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Transacci__idCaj__30F848ED">
+          <End Role="Caja" Type="Self.Caja" Multiplicity="1" />
+          <End Role="Transaccion" Type="Self.Transaccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Caja">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Transaccion">
+              <PropertyRef Name="idCaja" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Prestamo__idCali__4222D4EF">
+          <End Role="CalificacionCartera" Type="Self.CalificacionCartera" Multiplicity="1" />
+          <End Role="Prestamo" Type="Self.Prestamo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CalificacionCartera">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Prestamo">
+              <PropertyRef Name="idCalificacionCArtera" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Empleado__idCarg__2A4B4B5E">
+          <End Role="Cargo" Type="Self.Cargo" Multiplicity="1" />
+          <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cargo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Empleado">
+              <PropertyRef Name="idCargo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Ciudad__idDepart__145C0A3F">
+          <End Role="Departamento" Type="Self.Departamento" Multiplicity="1" />
+          <End Role="Ciudad" Type="Self.Ciudad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departamento">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Ciudad">
+              <PropertyRef Name="idDepartamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Cliente__idCiudd__182C9B23">
+          <End Role="Ciudad" Type="Self.Ciudad" Multiplicity="1" />
+          <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ciudad">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cliente">
+              <PropertyRef Name="idCiuddad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Cliente__idrubro__173876EA">
+          <End Role="Rubro" Type="Self.Rubro" Multiplicity="1" />
+          <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rubro">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cliente">
+              <PropertyRef Name="idrubro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Natural__id__1B0907CE">
+          <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+          <End Role="Natural" Type="Self.Natural" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Cliente">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Natural">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Prestamo__idclie__403A8C7D">
+          <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+          <End Role="Prestamo" Type="Self.Prestamo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cliente">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Prestamo">
+              <PropertyRef Name="idcliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Cuenta__idEmplea__3C34F16F">
+          <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
+          <End Role="Cuenta" Type="Self.Cuenta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empleado">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cuenta">
+              <PropertyRef Name="idEmpleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Transacci__idCue__3F115E1A">
+          <End Role="Cuenta" Type="Self.Cuenta" Multiplicity="1" />
+          <End Role="TransaccionCuenta" Type="Self.TransaccionCuenta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cuenta">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="TransaccionCuenta">
+              <PropertyRef Name="idCuenta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CuentaBan__idEmp__2B0A656D">
+          <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
+          <End Role="CuentaBancaria" Type="Self.CuentaBancaria" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empleado">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CuentaBancaria">
+              <PropertyRef Name="idEmpleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CuentaBan__idEnt__2BFE89A6">
+          <End Role="EntidadFinanciera" Type="Self.EntidadFinanciera" Multiplicity="1" />
+          <End Role="CuentaBancaria" Type="Self.CuentaBancaria" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EntidadFinanciera">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CuentaBancaria">
+              <PropertyRef Name="idEntidadFinanciera" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Transacci__idcue__2EDAF651">
+          <End Role="CuentaBancaria" Type="Self.CuentaBancaria" Multiplicity="1" />
+          <End Role="TransaccionCuentaBancaria" Type="Self.TransaccionCuentaBancaria" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CuentaBancaria">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="TransaccionCuentaBancaria">
+              <PropertyRef Name="idcuentaBancaria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Cuota__idPrestam__45F365D3">
+          <End Role="Prestamo" Type="Self.Prestamo" Multiplicity="1" />
+          <End Role="Cuota" Type="Self.Cuota" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Prestamo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Cuota">
+              <PropertyRef Name="idPrestamos" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Pago__idCuota__48CFD27E">
+          <End Role="Cuota" Type="Self.Cuota" Multiplicity="1" />
+          <End Role="Pago" Type="Self.Pago" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cuota">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Pago">
+              <PropertyRef Name="idCuota" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Empleado__idSucu__2B3F6F97">
+          <End Role="Sucursal" Type="Self.Sucursal" Multiplicity="1" />
+          <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sucursal">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Empleado">
+              <PropertyRef Name="idSucursal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HTransacc__idEmp__34C8D9D1">
+          <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
+          <End Role="HTransaccion" Type="Self.HTransaccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empleado">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HTransaccion">
+              <PropertyRef Name="idEmpleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Prestamo__idEmpl__412EB0B6">
+          <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
+          <End Role="Prestamo" Type="Self.Prestamo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empleado">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Prestamo">
+              <PropertyRef Name="idEmpleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Garantia__idPres__4BAC3F29">
+          <End Role="Prestamo" Type="Self.Prestamo" Multiplicity="1" />
+          <End Role="Garantia" Type="Self.Garantia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Prestamo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Garantia">
+              <PropertyRef Name="idPrestamo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Prestamo__idtipo__339FAB6E">
+          <End Role="TipoDesembolso" Type="Self.TipoDesembolso" Multiplicity="0..1" />
+          <End Role="Prestamo" Type="Self.Prestamo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoDesembolso">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Prestamo">
+              <PropertyRef Name="idtipoDesembolso" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="dbFinanciaCorpEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AperturaSistema" EntityType="Self.AperturaSistema" />
+          <EntitySet Name="Caja" EntityType="Self.Caja" />
+          <EntitySet Name="CalificacionCartera" EntityType="Self.CalificacionCartera" />
+          <EntitySet Name="Cargo" EntityType="Self.Cargo" />
+          <EntitySet Name="Ciudad" EntityType="Self.Ciudad" />
+          <EntitySet Name="Cliente" EntityType="Self.Cliente" />
+          <EntitySet Name="Contrato" EntityType="Self.Contrato" />
+          <EntitySet Name="Cuenta" EntityType="Self.Cuenta" />
+          <EntitySet Name="CuentaBancaria" EntityType="Self.CuentaBancaria" />
+          <EntitySet Name="Cuota" EntityType="Self.Cuota" />
+          <EntitySet Name="Departamento" EntityType="Self.Departamento" />
+          <EntitySet Name="Empleado" EntityType="Self.Empleado" />
+          <EntitySet Name="EntidadFinanciera" EntityType="Self.EntidadFinanciera" />
+          <EntitySet Name="Garantia" EntityType="Self.Garantia" />
+          <EntitySet Name="HTransaccion" EntityType="Self.HTransaccion" />
+          <EntitySet Name="Natural" EntityType="Self.Natural" />
+          <EntitySet Name="Pago" EntityType="Self.Pago" />
+          <EntitySet Name="Prestamo" EntityType="Self.Prestamo" />
+          <EntitySet Name="Rubro" EntityType="Self.Rubro" />
+          <EntitySet Name="Sucursal" EntityType="Self.Sucursal" />
+          <EntitySet Name="TbResumenPrestamo" EntityType="Self.TbResumenPrestamo" />
+          <EntitySet Name="TipoDesembolso" EntityType="Self.TipoDesembolso" />
+          <EntitySet Name="Transaccion" EntityType="Self.Transaccion" />
+          <EntitySet Name="TransaccionCuenta" EntityType="Self.TransaccionCuenta" />
+          <EntitySet Name="TransaccionCuentaBancaria" EntityType="Self.TransaccionCuentaBancaria" />
+          <EntitySet Name="VclienteGeneral" EntityType="Self.VclienteGeneral" />
+          <EntitySet Name="VCuentaBancaria" EntityType="Self.VCuentaBancaria" />
+          <EntitySet Name="VCuentaBancariaTransaccion" EntityType="Self.VCuentaBancariaTransaccion" />
+          <EntitySet Name="VGPrestamo" EntityType="Self.VGPrestamo" />
+          <EntitySet Name="VistaCajaTransaccion" EntityType="Self.VistaCajaTransaccion" />
+          <EntitySet Name="VMensajeria" EntityType="Self.VMensajeria" />
+          <EntitySet Name="VPrestamoCuotaCalificacion" EntityType="Self.VPrestamoCuotaCalificacion" />
+          <EntitySet Name="VPrestamoCuotaCalificacionEstadoCuotaCanceladas" EntityType="Self.VPrestamoCuotaCalificacionEstadoCuotaCanceladas" />
+          <EntitySet Name="VPrestamoCuotaCalificacionEstadoCuotaPendiente" EntityType="Self.VPrestamoCuotaCalificacionEstadoCuotaPendiente" />
+          <EntitySet Name="VPrestamoCuotas" EntityType="Self.VPrestamoCuotas" />
+          <EntitySet Name="VPrestamoCuotasVigente" EntityType="Self.VPrestamoCuotasVigente" />
+          <AssociationSet Name="FK__Caja__idEmpleado__2E1BDC42" Association="Self.FK__Caja__idEmpleado__2E1BDC42">
+            <End Role="Empleado" EntitySet="Empleado" />
+            <End Role="Caja" EntitySet="Caja" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HTransacc__idCaj__33D4B598" Association="Self.FK__HTransacc__idCaj__33D4B598">
+            <End Role="Caja" EntitySet="Caja" />
+            <End Role="HTransaccion" EntitySet="HTransaccion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Transacci__idCaj__30F848ED" Association="Self.FK__Transacci__idCaj__30F848ED">
+            <End Role="Caja" EntitySet="Caja" />
+            <End Role="Transaccion" EntitySet="Transaccion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Prestamo__idCali__4222D4EF" Association="Self.FK__Prestamo__idCali__4222D4EF">
+            <End Role="CalificacionCartera" EntitySet="CalificacionCartera" />
+            <End Role="Prestamo" EntitySet="Prestamo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Empleado__idCarg__2A4B4B5E" Association="Self.FK__Empleado__idCarg__2A4B4B5E">
+            <End Role="Cargo" EntitySet="Cargo" />
+            <End Role="Empleado" EntitySet="Empleado" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Ciudad__idDepart__145C0A3F" Association="Self.FK__Ciudad__idDepart__145C0A3F">
+            <End Role="Departamento" EntitySet="Departamento" />
+            <End Role="Ciudad" EntitySet="Ciudad" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cliente__idCiudd__182C9B23" Association="Self.FK__Cliente__idCiudd__182C9B23">
+            <End Role="Ciudad" EntitySet="Ciudad" />
+            <End Role="Cliente" EntitySet="Cliente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cliente__idrubro__173876EA" Association="Self.FK__Cliente__idrubro__173876EA">
+            <End Role="Rubro" EntitySet="Rubro" />
+            <End Role="Cliente" EntitySet="Cliente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Natural__id__1B0907CE" Association="Self.FK__Natural__id__1B0907CE">
+            <End Role="Cliente" EntitySet="Cliente" />
+            <End Role="Natural" EntitySet="Natural" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Prestamo__idclie__403A8C7D" Association="Self.FK__Prestamo__idclie__403A8C7D">
+            <End Role="Cliente" EntitySet="Cliente" />
+            <End Role="Prestamo" EntitySet="Prestamo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cuenta__idEmplea__3C34F16F" Association="Self.FK__Cuenta__idEmplea__3C34F16F">
+            <End Role="Empleado" EntitySet="Empleado" />
+            <End Role="Cuenta" EntitySet="Cuenta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Transacci__idCue__3F115E1A" Association="Self.FK__Transacci__idCue__3F115E1A">
+            <End Role="Cuenta" EntitySet="Cuenta" />
+            <End Role="TransaccionCuenta" EntitySet="TransaccionCuenta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CuentaBan__idEmp__2B0A656D" Association="Self.FK__CuentaBan__idEmp__2B0A656D">
+            <End Role="Empleado" EntitySet="Empleado" />
+            <End Role="CuentaBancaria" EntitySet="CuentaBancaria" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CuentaBan__idEnt__2BFE89A6" Association="Self.FK__CuentaBan__idEnt__2BFE89A6">
+            <End Role="EntidadFinanciera" EntitySet="EntidadFinanciera" />
+            <End Role="CuentaBancaria" EntitySet="CuentaBancaria" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Transacci__idcue__2EDAF651" Association="Self.FK__Transacci__idcue__2EDAF651">
+            <End Role="CuentaBancaria" EntitySet="CuentaBancaria" />
+            <End Role="TransaccionCuentaBancaria" EntitySet="TransaccionCuentaBancaria" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cuota__idPrestam__45F365D3" Association="Self.FK__Cuota__idPrestam__45F365D3">
+            <End Role="Prestamo" EntitySet="Prestamo" />
+            <End Role="Cuota" EntitySet="Cuota" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Pago__idCuota__48CFD27E" Association="Self.FK__Pago__idCuota__48CFD27E">
+            <End Role="Cuota" EntitySet="Cuota" />
+            <End Role="Pago" EntitySet="Pago" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Empleado__idSucu__2B3F6F97" Association="Self.FK__Empleado__idSucu__2B3F6F97">
+            <End Role="Sucursal" EntitySet="Sucursal" />
+            <End Role="Empleado" EntitySet="Empleado" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HTransacc__idEmp__34C8D9D1" Association="Self.FK__HTransacc__idEmp__34C8D9D1">
+            <End Role="Empleado" EntitySet="Empleado" />
+            <End Role="HTransaccion" EntitySet="HTransaccion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Prestamo__idEmpl__412EB0B6" Association="Self.FK__Prestamo__idEmpl__412EB0B6">
+            <End Role="Empleado" EntitySet="Empleado" />
+            <End Role="Prestamo" EntitySet="Prestamo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Garantia__idPres__4BAC3F29" Association="Self.FK__Garantia__idPres__4BAC3F29">
+            <End Role="Prestamo" EntitySet="Prestamo" />
+            <End Role="Garantia" EntitySet="Garantia" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Prestamo__idtipo__339FAB6E" Association="Self.FK__Prestamo__idtipo__339FAB6E">
+            <End Role="TipoDesembolso" EntitySet="TipoDesembolso" />
+            <End Role="Prestamo" EntitySet="Prestamo" />
+          </AssociationSet>
+          <FunctionImport Name="sp_IniciarBasededatos" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dbFinanciaCorpModelStoreContainer" CdmEntityContainer="dbFinanciaCorpEntities">
+          <EntitySetMapping Name="AperturaSistema">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.AperturaSistema">
+              <MappingFragment StoreEntitySet="AperturaSistema">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="FechaApertura" ColumnName="FechaApertura" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Caja">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.Caja">
+              <MappingFragment StoreEntitySet="Caja">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="FechaHoraApertura" ColumnName="FechaHoraApertura" />
+                <ScalarProperty Name="FechaHoraCierre" ColumnName="FechaHoraCierre" />
+                <ScalarProperty Name="DescripcionCaja" ColumnName="DescripcionCaja" />
+                <ScalarProperty Name="EstadoCaja" ColumnName="EstadoCaja" />
+                <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CalificacionCartera">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.CalificacionCartera">
+              <MappingFragment StoreEntitySet="CalificacionCartera">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="NombreCalificacion" ColumnName="NombreCalificacion" />
+                <ScalarProperty Name="DiasInicio" ColumnName="DiasInicio" />
+                <ScalarProperty Name="DiasFinal" ColumnName="DiasFinal" />
+                <ScalarProperty Name="DescripcionCalificacion" ColumnName="DescripcionCalificacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cargo">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.Cargo">
+              <MappingFragment StoreEntitySet="Cargo">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="NombreCargo" ColumnName="NombreCargo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ciudad">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.Ciudad">
+              <MappingFragment StoreEntitySet="Ciudad">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="NombreCiudad" ColumnName="NombreCiudad" />
+                <ScalarProperty Name="idDepartamento" ColumnName="idDepartamento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cliente">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.Cliente">
+              <MappingFragment StoreEntitySet="Cliente">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Telefono2" ColumnName="Telefono2" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+                <ScalarProperty Name="Nit" ColumnName="Nit" />
+                <ScalarProperty Name="idrubro" ColumnName="idrubro" />
+                <ScalarProperty Name="idCiuddad" ColumnName="idCiuddad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contrato">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.Contrato">
+              <MappingFragment StoreEntitySet="Contrato">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Parrafo1" ColumnName="Parrafo1" />
+                <ScalarProperty Name="Parrafo2" ColumnName="Parrafo2" />
+                <ScalarProperty Name="Parrafo3" ColumnName="Parrafo3" />
+                <ScalarProperty Name="Parrafo4" ColumnName="Parrafo4" />
+                <ScalarProperty Name="Parrafo5" ColumnName="Parrafo5" />
+                <ScalarProperty Name="Parrafo6" ColumnName="Parrafo6" />
+                <ScalarProperty Name="Parrafo7" ColumnName="Parrafo7" />
+                <ScalarProperty Name="Parrafo8" ColumnName="Parrafo8" />
+                <ScalarProperty Name="Parrafo9" ColumnName="Parrafo9" />
+                <ScalarProperty Name="Parrafo10" ColumnName="Parrafo10" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cuenta">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.Cuenta">
+              <MappingFragment StoreEntitySet="Cuenta">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="NombreCuenta" ColumnName="NombreCuenta" />
+                <ScalarProperty Name="FechaApertura" ColumnName="FechaApertura" />
+                <ScalarProperty Name="FechaCierre" ColumnName="FechaCierre" />
+                <ScalarProperty Name="EstadoCuenta" ColumnName="EstadoCuenta" />
+                <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CuentaBancaria">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.CuentaBancaria">
+              <MappingFragment StoreEntitySet="CuentaBancaria">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="NroCuenta" ColumnName="NroCuenta" />
+                <ScalarProperty Name="Moneda" ColumnName="Moneda" />
+                <ScalarProperty Name="FechaApertura" ColumnName="FechaApertura" />
+                <ScalarProperty Name="NombrecompletoTitular1" ColumnName="NombrecompletoTitular1" />
+                <ScalarProperty Name="NombreCompletoTitular2" ColumnName="NombreCompletoTitular2" />
+                <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+                <ScalarProperty Name="idEntidadFinanciera" ColumnName="idEntidadFinanciera" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cuota">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.Cuota">
+              <MappingFragment StoreEntitySet="Cuota">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="MontoCapital" ColumnName="MontoCapital" />
+                <ScalarProperty Name="MontoInteres" ColumnName="MontoInteres" />
+                <ScalarProperty Name="MontoDescuento" ColumnName="MontoDescuento" />
+                <ScalarProperty Name="FechaPagoProgramado" ColumnName="FechaPagoProgramado" />
+                <ScalarProperty Name="FechaPago" ColumnName="FechaPago" />
+                <ScalarProperty Name="DiasCuota" ColumnName="DiasCuota" />
+                <ScalarProperty Name="SwGeneroProximaCuota" ColumnName="SwGeneroProximaCuota" />
+                <ScalarProperty Name="idPrestamos" ColumnName="idPrestamos" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Departamento">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.Departamento">
+              <MappingFragment StoreEntitySet="Departamento">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="NombreDepartamento" ColumnName="NombreDepartamento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Empleado">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.Empleado">
+              <MappingFragment StoreEntitySet="Empleado">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="NombreEmpleado" ColumnName="NombreEmpleado" />
+                <ScalarProperty Name="DocumentoIdentidad" ColumnName="DocumentoIdentidad" />
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+                <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+                <ScalarProperty Name="idCargo" ColumnName="idCargo" />
+                <ScalarProperty Name="idSucursal" ColumnName="idSucursal" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EntidadFinanciera">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.EntidadFinanciera">
+              <MappingFragment StoreEntitySet="EntidadFinanciera">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="NombreEntidad" ColumnName="NombreEntidad" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Garantia">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.Garantia">
+              <MappingFragment StoreEntitySet="Garantia">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="NombreGarantia" ColumnName="NombreGarantia" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="PrecioGarantia" ColumnName="PrecioGarantia" />
+                <ScalarProperty Name="PrecioVenta" ColumnName="PrecioVenta" />
+                <ScalarProperty Name="idPrestamo" ColumnName="idPrestamo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HTransaccion">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.HTransaccion">
+              <MappingFragment StoreEntitySet="HTransaccion">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Monto" ColumnName="Monto" />
+                <ScalarProperty Name="FechaHora" ColumnName="FechaHora" />
+                <ScalarProperty Name="GlozaTransaccion" ColumnName="GlozaTransaccion" />
+                <ScalarProperty Name="idCaja" ColumnName="idCaja" />
+                <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Natural">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.Natural">
+              <MappingFragment StoreEntitySet="Natural">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="NombreCliente" ColumnName="NombreCliente" />
+                <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+                <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+                <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+                <ScalarProperty Name="DocumentoIdentidad" ColumnName="DocumentoIdentidad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pago">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.Pago">
+              <MappingFragment StoreEntitySet="Pago">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Monto" ColumnName="Monto" />
+                <ScalarProperty Name="FechaHoraPago" ColumnName="FechaHoraPago" />
+                <ScalarProperty Name="Gloza" ColumnName="Gloza" />
+                <ScalarProperty Name="idCuota" ColumnName="idCuota" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Prestamo">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.Prestamo">
+              <MappingFragment StoreEntitySet="Prestamo">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Monto" ColumnName="Monto" />
+                <ScalarProperty Name="FechaDesembolzo" ColumnName="FechaDesembolzo" />
+                <ScalarProperty Name="InteresMensual" ColumnName="InteresMensual" />
+                <ScalarProperty Name="PlazoMeses" ColumnName="PlazoMeses" />
+                <ScalarProperty Name="EstadoPrestamo" ColumnName="EstadoPrestamo" />
+                <ScalarProperty Name="idcliente" ColumnName="idcliente" />
+                <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+                <ScalarProperty Name="idCalificacionCArtera" ColumnName="idCalificacionCArtera" />
+                <ScalarProperty Name="idtipoDesembolso" ColumnName="idtipoDesembolso" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rubro">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.Rubro">
+              <MappingFragment StoreEntitySet="Rubro">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="NombreRubro" ColumnName="NombreRubro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sucursal">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.Sucursal">
+              <MappingFragment StoreEntitySet="Sucursal">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="NombreSucursal" ColumnName="NombreSucursal" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="LogoEmpresa" ColumnName="LogoEmpresa" />
+                <ScalarProperty Name="PaginaWeb" ColumnName="PaginaWeb" />
+                <ScalarProperty Name="NroNit" ColumnName="NroNit" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TbResumenPrestamo">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.TbResumenPrestamo">
+              <MappingFragment StoreEntitySet="TbResumenPrestamo">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Monto" ColumnName="Monto" />
+                <ScalarProperty Name="FechaDesembolzo" ColumnName="FechaDesembolzo" />
+                <ScalarProperty Name="InteresMensual" ColumnName="InteresMensual" />
+                <ScalarProperty Name="PlazoMeses" ColumnName="PlazoMeses" />
+                <ScalarProperty Name="EstadoPrestamo" ColumnName="EstadoPrestamo" />
+                <ScalarProperty Name="idcliente" ColumnName="idcliente" />
+                <ScalarProperty Name="NombreCompletoCliente" ColumnName="NombreCompletoCliente" />
+                <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+                <ScalarProperty Name="idCalificacionCArtera" ColumnName="idCalificacionCArtera" />
+                <ScalarProperty Name="NombreCalificacionCArtera" ColumnName="NombreCalificacionCArtera" />
+                <ScalarProperty Name="NroCuotasPendiente" ColumnName="NroCuotasPendiente" />
+                <ScalarProperty Name="TotalMontoInteresPendiente" ColumnName="TotalMontoInteresPendiente" />
+                <ScalarProperty Name="NroCuotasPagadas" ColumnName="NroCuotasPagadas" />
+                <ScalarProperty Name="TotalMontoInteresCancelado" ColumnName="TotalMontoInteresCancelado" />
+                <ScalarProperty Name="GararantiaDescripcion" ColumnName="GararantiaDescripcion" />
+                <ScalarProperty Name="FechaPagoCuota1erCuota" ColumnName="FechaPagoCuota1erCuota" />
+                <ScalarProperty Name="FechaPagoCuotaUltimaCuota" ColumnName="FechaPagoCuotaUltimaCuota" />
+                <ScalarProperty Name="TotalDeudaGeneral" ColumnName="TotalDeudaGeneral" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoDesembolso">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.TipoDesembolso">
+              <MappingFragment StoreEntitySet="TipoDesembolso">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="NombreTipoDesembolso" ColumnName="NombreTipoDesembolso" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Transaccion">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.Transaccion">
+              <MappingFragment StoreEntitySet="Transaccion">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Monto" ColumnName="Monto" />
+                <ScalarProperty Name="FechaHora" ColumnName="FechaHora" />
+                <ScalarProperty Name="GlozaTransaccion" ColumnName="GlozaTransaccion" />
+                <ScalarProperty Name="idCaja" ColumnName="idCaja" />
+                <ScalarProperty Name="TipoTransaccion" ColumnName="TipoTransaccion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TransaccionCuenta">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.TransaccionCuenta">
+              <MappingFragment StoreEntitySet="TransaccionCuenta">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Monto" ColumnName="Monto" />
+                <ScalarProperty Name="FechaHora" ColumnName="FechaHora" />
+                <ScalarProperty Name="Gloza" ColumnName="Gloza" />
+                <ScalarProperty Name="TipoTransaccion" ColumnName="TipoTransaccion" />
+                <ScalarProperty Name="idCuenta" ColumnName="idCuenta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TransaccionCuentaBancaria">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.TransaccionCuentaBancaria">
+              <MappingFragment StoreEntitySet="TransaccionCuentaBancaria">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="FechaTranscaccion" ColumnName="FechaTranscaccion" />
+                <ScalarProperty Name="Monto" ColumnName="Monto" />
+                <ScalarProperty Name="GlosaTransaccion" ColumnName="GlosaTransaccion" />
+                <ScalarProperty Name="ResponsableTransaccion" ColumnName="ResponsableTransaccion" />
+                <ScalarProperty Name="TipoTransaccion" ColumnName="TipoTransaccion" />
+                <ScalarProperty Name="idcuentaBancaria" ColumnName="idcuentaBancaria" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VclienteGeneral">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.VclienteGeneral">
+              <MappingFragment StoreEntitySet="VclienteGeneral">
+                <ScalarProperty Name="idcliente" ColumnName="idcliente" />
+                <ScalarProperty Name="NombreCliente" ColumnName="NombreCliente" />
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+                <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+                <ScalarProperty Name="DocumentoIdentidad" ColumnName="DocumentoIdentidad" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+                <ScalarProperty Name="Nit" ColumnName="Nit" />
+                <ScalarProperty Name="NombreRubro" ColumnName="NombreRubro" />
+                <ScalarProperty Name="NombreDepartamento" ColumnName="NombreDepartamento" />
+                <ScalarProperty Name="NombreCiudad" ColumnName="NombreCiudad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VCuentaBancaria">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.VCuentaBancaria">
+              <MappingFragment StoreEntitySet="VCuentaBancaria">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="NombreEntidad" ColumnName="NombreEntidad" />
+                <ScalarProperty Name="NroCuenta" ColumnName="NroCuenta" />
+                <ScalarProperty Name="NombrecompletoTitular1" ColumnName="NombrecompletoTitular1" />
+                <ScalarProperty Name="NombreCompletoTitular2" ColumnName="NombreCompletoTitular2" />
+                <ScalarProperty Name="Moneda" ColumnName="Moneda" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VCuentaBancariaTransaccion">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.VCuentaBancariaTransaccion">
+              <MappingFragment StoreEntitySet="VCuentaBancariaTransaccion">
+                <ScalarProperty Name="idtransaccionBancaria" ColumnName="idtransaccionBancaria" />
+                <ScalarProperty Name="NombreEntidad" ColumnName="NombreEntidad" />
+                <ScalarProperty Name="NroCuenta" ColumnName="NroCuenta" />
+                <ScalarProperty Name="NombrecompletoTitular1" ColumnName="NombrecompletoTitular1" />
+                <ScalarProperty Name="NombreCompletoTitular2" ColumnName="NombreCompletoTitular2" />
+                <ScalarProperty Name="Moneda" ColumnName="Moneda" />
+                <ScalarProperty Name="FechaTranscaccion" ColumnName="FechaTranscaccion" />
+                <ScalarProperty Name="Monto" ColumnName="Monto" />
+                <ScalarProperty Name="ResponsableTransaccion" ColumnName="ResponsableTransaccion" />
+                <ScalarProperty Name="TipoTransaccion" ColumnName="TipoTransaccion" />
+                <ScalarProperty Name="GlosaTransaccion" ColumnName="GlosaTransaccion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VGPrestamo">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.VGPrestamo">
+              <MappingFragment StoreEntitySet="VGPrestamo">
+                <ScalarProperty Name="idprestamo" ColumnName="idprestamo" />
+                <ScalarProperty Name="Monto" ColumnName="Monto" />
+                <ScalarProperty Name="FechaDesembolzo" ColumnName="FechaDesembolzo" />
+                <ScalarProperty Name="InteresMensual" ColumnName="InteresMensual" />
+                <ScalarProperty Name="PlazoMeses" ColumnName="PlazoMeses" />
+                <ScalarProperty Name="EstadoPrestamo" ColumnName="EstadoPrestamo" />
+                <ScalarProperty Name="idcliente" ColumnName="idcliente" />
+                <ScalarProperty Name="NombreCliente" ColumnName="NombreCliente" />
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+                <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+                <ScalarProperty Name="DocumentoIdentidad" ColumnName="DocumentoIdentidad" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+                <ScalarProperty Name="Nit" ColumnName="Nit" />
+                <ScalarProperty Name="NombreRubro" ColumnName="NombreRubro" />
+                <ScalarProperty Name="NombreDepartamento" ColumnName="NombreDepartamento" />
+                <ScalarProperty Name="NombreCiudad" ColumnName="NombreCiudad" />
+                <ScalarProperty Name="idcuota" ColumnName="idcuota" />
+                <ScalarProperty Name="MontoCapitalCuota" ColumnName="MontoCapitalCuota" />
+                <ScalarProperty Name="MontoInteres" ColumnName="MontoInteres" />
+                <ScalarProperty Name="MontoDescuento" ColumnName="MontoDescuento" />
+                <ScalarProperty Name="FechaPagoProgramado" ColumnName="FechaPagoProgramado" />
+                <ScalarProperty Name="FechaPago" ColumnName="FechaPago" />
+                <ScalarProperty Name="idGarantia" ColumnName="idGarantia" />
+                <ScalarProperty Name="NombreGarantia" ColumnName="NombreGarantia" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="PrecioGarantia" ColumnName="PrecioGarantia" />
+                <ScalarProperty Name="PrecioVenta" ColumnName="PrecioVenta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VistaCajaTransaccion">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.VistaCajaTransaccion">
+              <MappingFragment StoreEntitySet="VistaCajaTransaccion">
+                <ScalarProperty Name="idcaja" ColumnName="idcaja" />
+                <ScalarProperty Name="NombreEmpleado" ColumnName="NombreEmpleado" />
+                <ScalarProperty Name="idtransaccion" ColumnName="idtransaccion" />
+                <ScalarProperty Name="Monto" ColumnName="Monto" />
+                <ScalarProperty Name="FechaHora" ColumnName="FechaHora" />
+                <ScalarProperty Name="GlozaTransaccion" ColumnName="GlozaTransaccion" />
+                <ScalarProperty Name="tipoTRansaccion" ColumnName="tipoTRansaccion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VMensajeria">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.VMensajeria">
+              <MappingFragment StoreEntitySet="VMensajeria">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Monto" ColumnName="Monto" />
+                <ScalarProperty Name="FechaDesembolzo" ColumnName="FechaDesembolzo" />
+                <ScalarProperty Name="InteresMensual" ColumnName="InteresMensual" />
+                <ScalarProperty Name="PlazoMeses" ColumnName="PlazoMeses" />
+                <ScalarProperty Name="EstadoPrestamo" ColumnName="EstadoPrestamo" />
+                <ScalarProperty Name="idcliente" ColumnName="idcliente" />
+                <ScalarProperty Name="NombreCompletoCliente" ColumnName="NombreCompletoCliente" />
+                <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+                <ScalarProperty Name="idCalificacionCArtera" ColumnName="idCalificacionCArtera" />
+                <ScalarProperty Name="NombreCalificacionCArtera" ColumnName="NombreCalificacionCArtera" />
+                <ScalarProperty Name="NroCuotasPendiente" ColumnName="NroCuotasPendiente" />
+                <ScalarProperty Name="TotalMontoInteresPendiente" ColumnName="TotalMontoInteresPendiente" />
+                <ScalarProperty Name="NroCuotasPagadas" ColumnName="NroCuotasPagadas" />
+                <ScalarProperty Name="TotalMontoInteresCancelado" ColumnName="TotalMontoInteresCancelado" />
+                <ScalarProperty Name="GararantiaDescripcion" ColumnName="GararantiaDescripcion" />
+                <ScalarProperty Name="FechaPagoCuota1erCuota" ColumnName="FechaPagoCuota1erCuota" />
+                <ScalarProperty Name="FechaPagoCuotaUltimaCuota" ColumnName="FechaPagoCuotaUltimaCuota" />
+                <ScalarProperty Name="TotalDeudaGeneral" ColumnName="TotalDeudaGeneral" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="MensajeCobranza" ColumnName="MensajeCobranza" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VPrestamoCuotaCalificacion">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.VPrestamoCuotaCalificacion">
+              <MappingFragment StoreEntitySet="VPrestamoCuotaCalificacion">
+                <ScalarProperty Name="idprestamo" ColumnName="idprestamo" />
+                <ScalarProperty Name="monto" ColumnName="monto" />
+                <ScalarProperty Name="FechaDesembolzo" ColumnName="FechaDesembolzo" />
+                <ScalarProperty Name="NombreCliente" ColumnName="NombreCliente" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="NombreCalificacion" ColumnName="NombreCalificacion" />
+                <ScalarProperty Name="nroCuotaPendiente" ColumnName="nroCuotaPendiente" />
+                <ScalarProperty Name="TotalInteresPendiente" ColumnName="TotalInteresPendiente" />
+                <ScalarProperty Name="NroCuotaCancelada" ColumnName="NroCuotaCancelada" />
+                <ScalarProperty Name="TotalInteresCAncelado" ColumnName="TotalInteresCAncelado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VPrestamoCuotaCalificacionEstadoCuotaCanceladas">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.VPrestamoCuotaCalificacionEstadoCuotaCanceladas">
+              <MappingFragment StoreEntitySet="VPrestamoCuotaCalificacionEstadoCuotaCanceladas">
+                <ScalarProperty Name="idprestamo" ColumnName="idprestamo" />
+                <ScalarProperty Name="Monto" ColumnName="Monto" />
+                <ScalarProperty Name="FechaDesembolzo" ColumnName="FechaDesembolzo" />
+                <ScalarProperty Name="InteresMensual" ColumnName="InteresMensual" />
+                <ScalarProperty Name="PlazoMeses" ColumnName="PlazoMeses" />
+                <ScalarProperty Name="EstadoPrestamo" ColumnName="EstadoPrestamo" />
+                <ScalarProperty Name="idcliente" ColumnName="idcliente" />
+                <ScalarProperty Name="NombreCliente" ColumnName="NombreCliente" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="totalInteres" ColumnName="totalInteres" />
+                <ScalarProperty Name="NroCuota" ColumnName="NroCuota" />
+                <ScalarProperty Name="EstadoCuota" ColumnName="EstadoCuota" />
+                <ScalarProperty Name="idCalificacion" ColumnName="idCalificacion" />
+                <ScalarProperty Name="NombreCalificacion" ColumnName="NombreCalificacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VPrestamoCuotaCalificacionEstadoCuotaPendiente">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.VPrestamoCuotaCalificacionEstadoCuotaPendiente">
+              <MappingFragment StoreEntitySet="VPrestamoCuotaCalificacionEstadoCuotaPendiente">
+                <ScalarProperty Name="idprestamo" ColumnName="idprestamo" />
+                <ScalarProperty Name="Monto" ColumnName="Monto" />
+                <ScalarProperty Name="FechaDesembolzo" ColumnName="FechaDesembolzo" />
+                <ScalarProperty Name="InteresMensual" ColumnName="InteresMensual" />
+                <ScalarProperty Name="PlazoMeses" ColumnName="PlazoMeses" />
+                <ScalarProperty Name="EstadoPrestamo" ColumnName="EstadoPrestamo" />
+                <ScalarProperty Name="idcliente" ColumnName="idcliente" />
+                <ScalarProperty Name="NombreCliente" ColumnName="NombreCliente" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="totalInteres" ColumnName="totalInteres" />
+                <ScalarProperty Name="NroCuota" ColumnName="NroCuota" />
+                <ScalarProperty Name="EstadoCuota" ColumnName="EstadoCuota" />
+                <ScalarProperty Name="idCalificacion" ColumnName="idCalificacion" />
+                <ScalarProperty Name="NombreCalificacion" ColumnName="NombreCalificacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VPrestamoCuotas">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.VPrestamoCuotas">
+              <MappingFragment StoreEntitySet="VPrestamoCuotas">
+                <ScalarProperty Name="idprestamo" ColumnName="idprestamo" />
+                <ScalarProperty Name="monto" ColumnName="monto" />
+                <ScalarProperty Name="FechaDesembolzo" ColumnName="FechaDesembolzo" />
+                <ScalarProperty Name="interesMensual" ColumnName="interesMensual" />
+                <ScalarProperty Name="PlazoMeses" ColumnName="PlazoMeses" />
+                <ScalarProperty Name="EstadoPrestamo" ColumnName="EstadoPrestamo" />
+                <ScalarProperty Name="NombreCalificacion" ColumnName="NombreCalificacion" />
+                <ScalarProperty Name="idcliente" ColumnName="idcliente" />
+                <ScalarProperty Name="NombreCliente" ColumnName="NombreCliente" />
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+                <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+                <ScalarProperty Name="DocumentoIdentidad" ColumnName="DocumentoIdentidad" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+                <ScalarProperty Name="Nit" ColumnName="Nit" />
+                <ScalarProperty Name="NombreRubro" ColumnName="NombreRubro" />
+                <ScalarProperty Name="NombreDepartamento" ColumnName="NombreDepartamento" />
+                <ScalarProperty Name="NombreCiudad" ColumnName="NombreCiudad" />
+                <ScalarProperty Name="idcuota" ColumnName="idcuota" />
+                <ScalarProperty Name="MontoCapitalCuota" ColumnName="MontoCapitalCuota" />
+                <ScalarProperty Name="MontoInteres" ColumnName="MontoInteres" />
+                <ScalarProperty Name="MontoDescuento" ColumnName="MontoDescuento" />
+                <ScalarProperty Name="FechaPagoProgramado" ColumnName="FechaPagoProgramado" />
+                <ScalarProperty Name="FechaPago" ColumnName="FechaPago" />
+                <ScalarProperty Name="DiasCuota" ColumnName="DiasCuota" />
+                <ScalarProperty Name="swGeneroProximaCuota" ColumnName="swGeneroProximaCuota" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VPrestamoCuotasVigente">
+            <EntityTypeMapping TypeName="dbFinanciaCorpModel.VPrestamoCuotasVigente">
+              <MappingFragment StoreEntitySet="VPrestamoCuotasVigente">
+                <ScalarProperty Name="idprestamo" ColumnName="idprestamo" />
+                <ScalarProperty Name="Monto" ColumnName="Monto" />
+                <ScalarProperty Name="FechaDesembolzo" ColumnName="FechaDesembolzo" />
+                <ScalarProperty Name="InteresMensual" ColumnName="InteresMensual" />
+                <ScalarProperty Name="PlazoMeses" ColumnName="PlazoMeses" />
+                <ScalarProperty Name="EstadoPrestamo" ColumnName="EstadoPrestamo" />
+                <ScalarProperty Name="idcliente" ColumnName="idcliente" />
+                <ScalarProperty Name="NombreCliente" ColumnName="NombreCliente" />
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+                <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+                <ScalarProperty Name="DocumentoIdentidad" ColumnName="DocumentoIdentidad" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+                <ScalarProperty Name="Nit" ColumnName="Nit" />
+                <ScalarProperty Name="NombreRubro" ColumnName="NombreRubro" />
+                <ScalarProperty Name="NombreDepartamento" ColumnName="NombreDepartamento" />
+                <ScalarProperty Name="NombreCiudad" ColumnName="NombreCiudad" />
+                <ScalarProperty Name="idcuota" ColumnName="idcuota" />
+                <ScalarProperty Name="MontoCapitalCuota" ColumnName="MontoCapitalCuota" />
+                <ScalarProperty Name="MontoInteres" ColumnName="MontoInteres" />
+                <ScalarProperty Name="MontoDescuento" ColumnName="MontoDescuento" />
+                <ScalarProperty Name="FechaPagoProgramado" ColumnName="FechaPagoProgramado" />
+                <ScalarProperty Name="FechaPago" ColumnName="FechaPago" />
+                <ScalarProperty Name="DiasCuota" ColumnName="DiasCuota" />
+                <ScalarProperty Name="swGeneroProximaCuota" ColumnName="swGeneroProximaCuota" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_IniciarBasededatos" FunctionName="dbFinanciaCorpModel.Store.sp_IniciarBasededatos" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

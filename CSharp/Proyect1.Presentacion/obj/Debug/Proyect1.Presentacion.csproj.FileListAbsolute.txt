@@ -1,0 +1,141 @@
+D:\Aplicaciones2024\Proyect1.Presentacion\bin\Debug\Proyect1.Presentacion.exe.config
+D:\Aplicaciones2024\Proyect1.Presentacion\bin\Debug\Proyect1.Presentacion.exe
+D:\Aplicaciones2024\Proyect1.Presentacion\bin\Debug\Proyect1.Presentacion.pdb
+D:\Aplicaciones2024\Proyect1.Presentacion\bin\Debug\Preyecto1.RN.dll
+D:\Aplicaciones2024\Proyect1.Presentacion\bin\Debug\Preyecto1.RN.pdb
+D:\Aplicaciones2024\Proyect1.Presentacion\obj\Debug\Proyect1.Presentacion.csproj.AssemblyReference.cache
+D:\Aplicaciones2024\Proyect1.Presentacion\obj\Debug\Proyect1.Presentacion.frmEnteros.resources
+D:\Aplicaciones2024\Proyect1.Presentacion\obj\Debug\Proyect1.Presentacion.Properties.Resources.resources
+D:\Aplicaciones2024\Proyect1.Presentacion\obj\Debug\Proyect1.Presentacion.csproj.GenerateResource.cache
+D:\Aplicaciones2024\Proyect1.Presentacion\obj\Debug\Proyect1.Presentacion.csproj.CoreCompileInputs.cache
+D:\Aplicaciones2024\Proyect1.Presentacion\obj\Debug\Proyect1.AFE4BC2C.Up2Date
+D:\Aplicaciones2024\Proyect1.Presentacion\obj\Debug\Proyect1.Presentacion.exe
+D:\Aplicaciones2024\Proyect1.Presentacion\obj\Debug\Proyect1.Presentacion.pdb
+D:\Aplicaciones2024\Proyect1.Presentacion\obj\Debug\Proyect1.Presentacion.frmVector.resources
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\x86\KernelTraceControl.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\x86\KernelTraceControl.Win61.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\x86\msdia140.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\amd64\KernelTraceControl.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\amd64\msdia140.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\arm64\KernelTraceControl.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\arm64\msdia140.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\TraceReloggerLib.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Dia2Lib.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Proyect1.Presentacion.exe.config
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Proyect1.Presentacion.exe
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Proyect1.Presentacion.pdb
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\BenchmarkDotNet.Annotations.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\BenchmarkDotNet.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\CommandLine.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\EntityFramework.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\EntityFramework.SqlServer.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Gee.External.Capstone.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Iced.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.CodeAnalysis.CSharp.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.CodeAnalysis.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.Diagnostics.FastSerialization.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.Diagnostics.NETCore.Client.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.Diagnostics.Runtime.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.Diagnostics.Tracing.TraceEvent.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.DotNet.PlatformAbstractions.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.Extensions.Configuration.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.Extensions.Logging.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.Extensions.Options.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.Extensions.Primitives.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.Win32.Registry.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Perfolizer.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Preyecto1.RN.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Proyecto1.Datos.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\System.Buffers.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\System.Collections.Immutable.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\System.Memory.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\System.Numerics.Vectors.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\System.Reflection.Metadata.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\System.Security.AccessControl.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\System.Security.Principal.Windows.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\System.Text.Encoding.CodePages.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Preyecto1.RN.pdb
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Preyecto1.RN.dll.config
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Proyecto1.Datos.pdb
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Proyecto1.Datos.dll.config
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\BenchmarkDotNet.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\BenchmarkDotNet.Annotations.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\CommandLine.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\EntityFramework.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\EntityFramework.SqlServer.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Gee.External.Capstone.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Iced.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.CodeAnalysis.pdb
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.CodeAnalysis.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.CodeAnalysis.CSharp.pdb
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.CodeAnalysis.CSharp.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.Diagnostics.FastSerialization.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.Diagnostics.NETCore.Client.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.Diagnostics.Runtime.pdb
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.Diagnostics.Runtime.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.Diagnostics.Tracing.TraceEvent.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.DotNet.PlatformAbstractions.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.Extensions.Configuration.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.Extensions.Logging.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.Extensions.Options.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.Extensions.Primitives.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\Microsoft.Win32.Registry.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\System.Buffers.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\System.Collections.Immutable.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\System.Memory.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\System.Numerics.Vectors.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\System.Reflection.Metadata.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\System.Security.AccessControl.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\System.Security.Principal.Windows.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\cs\Microsoft.CodeAnalysis.resources.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\de\Microsoft.CodeAnalysis.resources.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\es\Microsoft.CodeAnalysis.resources.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\fr\Microsoft.CodeAnalysis.resources.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\it\Microsoft.CodeAnalysis.resources.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\ja\Microsoft.CodeAnalysis.resources.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\ko\Microsoft.CodeAnalysis.resources.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\pl\Microsoft.CodeAnalysis.resources.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\ru\Microsoft.CodeAnalysis.resources.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\tr\Microsoft.CodeAnalysis.resources.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\bin\Debug\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\obj\Debug\Proyect1.Presentacion.csproj.AssemblyReference.cache
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\obj\Debug\Proyect1.Presentacion.frmEnteros.resources
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\obj\Debug\Proyect1.Presentacion.FrmMatrizEntero.resources
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\obj\Debug\Proyect1.Presentacion.frmOperacionesMatriz.resources
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\obj\Debug\Proyect1.Presentacion.frmVector.resources
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\obj\Debug\Proyect1.Presentacion.Properties.Resources.resources
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\obj\Debug\Proyect1.Presentacion.csproj.GenerateResource.cache
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\obj\Debug\Proyect1.Presentacion.GeneratedMSBuildEditorConfig.editorconfig
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\obj\Debug\Proyect1.Presentacion.csproj.CoreCompileInputs.cache
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\obj\Debug\Proyect1.AFE4BC2C.Up2Date
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\obj\Debug\Proyect1.Presentacion.exe
+D:\Aplicaciones 2024\ProgramacionIV\Proyect1.Presentacion\obj\Debug\Proyect1.Presentacion.pdb
