@@ -1,0 +1,43 @@
+run.bat
+Compilando los programas...
+Ejecución de la verificacion de números primos...
+Secuencial: true | Tiempo: 5.3788 ms
+Asíncrono: true | Tiempo: 10.3638 ms
+Hilos Manuales (2 hilos): true | Tiempo: 5.4277 ms
+Hilos Manuales (4 hilos): true | Tiempo: 1.351 ms
+Hilos Manuales (8 hilos): true | Tiempo: 2.4247 ms
+ExecutorService (2 hilos): true | Tiempo: 11.5217 ms
+ExecutorService (4 hilos): true | Tiempo: 11.7348 ms
+ExecutorService (8 hilos): true | Tiempo: 13.8348 ms
+-----------------------------------
+Ejecución de la multiplicación de matrices...
+Multiplicación de matrices de tamaño: 500x500
+Tiempo secuencial: 1625.7793 ms
+Tiempo con 2 hilos manuales: 1142.096 ms
+Tiempo con 4 hilos manuales: 879.5452 ms
+Tiempo con 8 hilos manuales: 1221.8876 ms
+Tiempo con 2 hilos (ExecutorService): 905.7327 ms
+Tiempo con 4 hilos (ExecutorService): 741.1277 ms
+Tiempo con 8 hilos (ExecutorService): 1216.4236 ms
+
+Multiplicación de matrices de tamaño: 1000x1000
+Tiempo secuencial: 54673.7294 ms
+Tiempo con 2 hilos manuales: 31811.9232 ms
+Tiempo con 4 hilos manuales: 20491.3736 ms
+Tiempo con 8 hilos manuales: 18010.1309 ms
+Tiempo con 2 hilos (ExecutorService): 31718.0112 ms
+Tiempo con 4 hilos (ExecutorService): 20955.5316 ms
+Tiempo con 8 hilos (ExecutorService): 18511.464 ms
+
+Multiplicación de matrices de tamaño: 2000x2000
+Tiempo secuencial: 536516.5191 ms
+Tiempo con 2 hilos manuales: 302183.197 ms
+Tiempo con 4 hilos manuales: 207083.6141 ms
+Tiempo con 8 hilos manuales: 184531.5715 ms
+Tiempo con 2 hilos (ExecutorService): 310339.9181 ms
+Tiempo con 4 hilos (ExecutorService): 210562.9729 ms
+Tiempo con 8 hilos (ExecutorService): 244028.1374 ms
+
+-----------------------------------
+Procesos finalizados.
+Presione una tecla para continuar . . .
